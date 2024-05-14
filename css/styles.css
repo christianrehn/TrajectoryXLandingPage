@@ -1,3 +1,15 @@
+/* Fonts */
+@font-face {
+  font-family: "Exotc350 DmBd BT Demi-Bold";
+  src: url("../fonts/Exotc350 DmBd BT Demi-Bold.eot");
+  src: url("../fonts/Exotc350 DmBd BT Demi-Bold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/Exotc350 DmBd BT Demi-Bold.woff2")format("woff2"),
+  url("../fonts/Exotc350 DmBd BT Demi-Bold.woff")format("woff"),
+  url("../fonts/Exotc350 DmBd BT Demi-Bold.ttf")format("truetype"),
+  url("../fonts/Exotc350 DmBd BT Demi-Bold.svg#Exotc350 DmBd BT Demi-Bold")format("svg");
+}
+
+
 /* Nice Select CSS */
 .nice-select {
   -webkit-tap-highlight-color: transparent;
@@ -376,7 +388,8 @@ nav {
 .logo {
   font-size: 3.125rem;
   font-weight: 900;
-  font-family: "Exotc350 DmBd BT";
+  /*font-family: "Exotc350 DmBd BT";*/
+  font-family: "Exotc350 DmBd BT Demi-Bold";
 }
 
 #navbar ul li {
