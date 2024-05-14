@@ -376,6 +376,7 @@ nav {
 .logo {
   font-size: 3.125rem;
   font-weight: 900;
+  font-family: "Exotc350 DmBd BT";
 }
 
 #navbar ul li {
@@ -817,8 +818,8 @@ nav {
 }
 
 .app-logo {
-  -webkit-filter: drop-shadow(0 10px 30px rgba(223, 27, 60, 0.3));
-  filter: drop-shadow(0 10px 30px rgba(223, 27, 60, 0.3));
+  /*-webkit-filter: drop-shadow(0 10px 30px rgba(223, 27, 60, 0.3));*/
+  /*filter: drop-shadow(0 10px 30px rgba(223, 27, 60, 0.3));*/
 }
 /* End: Download The App Section Styling */
 
