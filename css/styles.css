@@ -1061,6 +1061,10 @@ nav {
     display: block;
     margin: auto;
   }
+
+  .app-logo {
+    width: 70%;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -1069,11 +1073,11 @@ nav {
     font-size: 18px;
   }
   h1 {
-    font-size: 50px;
+    font-size: 36px;
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   section {
@@ -1242,16 +1246,20 @@ nav {
     display: block;
     margin: auto;
   }
+
+  .app-logo {
+    width: 70%;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   h1 {
-    font-size: 50px;
+    font-size: 36px;
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 30px;
   }
   #howto h4 {
     font-size: 1.3rem;
@@ -1366,16 +1374,20 @@ nav {
     font-size: 18px;
     margin: auto;
   }
+
+  .app-logo {
+    width: 70%;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   h1 {
-    font-size: 50px;
+    font-size: 36px;
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 30px;
   }
   #howto h4 {
     font-size: 1.3rem;
@@ -1488,6 +1500,10 @@ nav {
     padding-right: 100px;
     font-size: 18px;
     margin: auto;
+  }
+
+  .app-logo {
+    width: 40%;
   }
 }
 
