@@ -672,6 +672,12 @@ nav {
   font-size: 18px;
 }
 
+.description {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
 .client-info {
   margin-top: 1.875rem;
   display: flex;
