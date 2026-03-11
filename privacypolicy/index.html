@@ -6,6 +6,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' https://ajax.googleapis.com 'unsafe-inline';
+        style-src 'self' https://use.fontawesome.com 'unsafe-inline';
+        font-src 'self' https://use.fontawesome.com;
+        img-src 'self' data: https://is1-ssl.mzstatic.com;
+        connect-src 'self' https://itunes.apple.com;
+        base-uri 'self';
+        form-action 'self';
+    "/>
     <base target="_blank">
 
     <title class="pageTitle"></title>
