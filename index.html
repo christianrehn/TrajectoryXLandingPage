@@ -6,8 +6,8 @@
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
         script-src 'self' https://ajax.googleapis.com 'unsafe-inline';
-        style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
-        font-src 'self' https://fonts.gstatic.com;
+        style-src 'self' 'unsafe-inline';
+        font-src 'self';
         img-src 'self' data:;
         frame-src https://www.youtube.com https://youtube.com;
         connect-src 'self';
@@ -91,12 +91,9 @@
 
     <!-- End of Required Social Preview MetaTags -->
 
-    <!-- LATO — Google Font -->
-    <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
-            rel="stylesheet"
-    />
-    <!-- End: LATO — Google Font -->
+    <!-- Lato Font (locally hosted) -->
+    <link rel="stylesheet" href="css/fonts.css"/>
+    <!-- End: Lato Font -->
 
     <!-- Main CSS File -->
     <link rel="stylesheet" href="css/styles.css"/>
@@ -624,7 +621,7 @@
 
 <!-- Required JavaScript Files & CDN -->
 <!-- JQuery CDN -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
 
 <!-- Main JS Files -->
 <script src="js/essential.js"></script>
