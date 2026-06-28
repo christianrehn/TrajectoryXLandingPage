@@ -615,18 +615,7 @@ nav {
 }
 /* End: Features Section Styling */
 
-/* Videos Section Styling */
-#videos {
-  border-top: 1px solid #e0e0e0;
-  margin-top: 200px;
-}
-#videos .stylish_heading {
-  text-align: center;
-}
-#videos .row {
-  margin-top: 6.25rem;
-}
-
+/* Testimonial / Drill Bubble Styling */
 .bubble {
   background-color: #fff;
   border: 1px solid #dfdfdf;
@@ -700,7 +689,7 @@ nav {
   font-size: 16px;
   line-height: 1;
 }
-/* End: Videos Section Styling */
+/* End: Testimonial / Drill Bubble Styling */
 
 /* How To Section Styling */
 #howto {
@@ -873,6 +862,211 @@ nav {
 }
 /* End: Footer Section Styling */
 
+/* Hero Compatibility Line */
+.hero-compat {
+  font-size: 1rem !important;
+  font-weight: 700;
+  color: #ffffff !important;
+  margin-top: -3.5rem !important;
+  margin-bottom: 2.5rem !important;
+  opacity: 0.9;
+}
+/* End: Hero Compatibility Line */
+
+/* Devices Section Styling */
+#devices {
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 100px;
+}
+
+#devices .stylish_heading,
+#swingvideo .stylish_heading {
+  text-align: center;
+}
+
+.devices-intro {
+  max-width: 760px;
+  margin: 30px auto 60px auto;
+}
+
+.device-card {
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 12px;
+  padding: 40px 35px;
+  height: 100%;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.device-card:hover {
+  border: 1px solid transparent;
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.device-card h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  background: linear-gradient(to bottom, #006699 10%, #009DDC 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.device-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.device-badge {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  background: linear-gradient(to bottom, #006699 10%, #009DDC 100%);
+  border-radius: 50px;
+  padding: 3px 12px;
+  margin-left: 8px;
+}
+/* End: Devices Section Styling */
+
+/* Swing Video Section Styling */
+#swingvideo {
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 60px;
+  padding-top: 80px;
+  position: relative;
+}
+
+.coming-soon-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(to bottom, #006699 10%, #009DDC 100%);
+  border-radius: 50px;
+  padding: 6px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 102, 153, 0.25);
+}
+
+#swingvideo .row {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.swingvideo-description {
+  margin-top: 0;
+  text-align: left;
+}
+
+.swingvideo-description .little-description {
+  margin-top: 1.25rem;
+}
+
+.swingvideo-cards {
+  margin-top: 70px !important;
+  align-items: stretch !important;
+}
+
+.feature-card {
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 12px;
+  padding: 30px;
+  height: 100%;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  border: 1px solid transparent;
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card .company-name {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.feature-card .description {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+/* Screenshot Placeholder */
+.screenshot-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  border: 2px dashed #b8d8e6;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(0, 102, 153, 0.04), rgba(0, 157, 220, 0.08));
+  color: #006699;
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  opacity: 0.6;
+}
+
+.placeholder-text {
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+/* End: Swing Video Section Styling */
+
+/* AI Coach Section Styling */
+#aicoach {
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 60px;
+  padding-top: 80px;
+}
+
+#aicoach .stylish_heading {
+  text-align: center;
+}
+
+.aicoach-cards {
+  margin-top: 50px !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.aicoach-note {
+  max-width: 760px;
+  margin: 40px auto 0 auto;
+  font-size: 0.95rem;
+  color: #808080;
+}
+
+.aicoach-note a {
+  color: #006699;
+  font-weight: 700;
+  text-decoration: underline;
+}
+/* End: AI Coach Section Styling */
+
 /* End: Main CSS Rules */
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -942,6 +1136,10 @@ nav {
   .hero-description p {
     font-size: 16px;
     margin-bottom: 1.875rem;
+  }
+  .hero-compat {
+    margin-top: 0 !important;
+    margin-bottom: 1.875rem !important;
   }
   .hero-img {
     display: none;
@@ -1127,6 +1325,10 @@ nav {
   }
   .hero-description p {
     margin-bottom: 1.875rem;
+  }
+  .hero-compat {
+    margin-top: 0 !important;
+    margin-bottom: 1.875rem !important;
   }
   .hero-img {
     display: none;
