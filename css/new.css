@@ -500,6 +500,32 @@ h3 { font-size: 1.3rem; letter-spacing: -0.01em; }
 .cta-wrap p { color: var(--muted); max-width: 50ch; margin: 1.1rem auto 2rem; }
 .cta-actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
 
+/* ---------- More apps (cross-promo) ---------- */
+.crosspromo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 760px;
+    margin-inline: auto;
+    text-decoration: none;
+}
+.crosspromo-logo {
+    width: 88px;
+    height: 88px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    flex: none;
+}
+.crosspromo-copy { flex: 1 1 auto; }
+.crosspromo-copy h3 { margin-bottom: 0.35rem; }
+.crosspromo-copy p { color: var(--muted); font-size: 0.98rem; }
+.crosspromo-cta { flex: none; }
+.crosspromo-cta img { height: 46px; width: auto; }
+
+@media (max-width: 620px) {
+    .crosspromo { flex-direction: column; text-align: center; }
+}
+
 /* ---------- Footer ---------- */
 footer { border-top: 1px solid var(--border); padding-block: 3rem; }
 .foot {
