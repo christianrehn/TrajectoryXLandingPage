@@ -281,9 +281,10 @@ h3 { font-size: 1.3rem; letter-spacing: -0.01em; }
     animation: pulse 6s ease-in-out infinite;
 }
 .hero-visual img {
-    border-radius: 26px;
-    width: 100%;
-    max-width: 460px;
+    border-radius: 32px;
+    width: auto;
+    max-width: 100%;
+    max-height: 620px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
 }
@@ -500,6 +501,38 @@ h3 { font-size: 1.3rem; letter-spacing: -0.01em; }
 .cta-wrap p { color: var(--muted); max-width: 50ch; margin: 1.1rem auto 2rem; }
 .cta-actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
 
+/* ---------- Gallery ---------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.5rem, 1rem + 3vw, 3rem);
+    max-width: 920px;
+    margin-inline: auto;
+}
+.phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.phone img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 28px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+.phone figcaption {
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-align: center;
+}
+@media (max-width: 760px) {
+    .gallery { grid-template-columns: 1fr; gap: 2.5rem; }
+    .phone img { max-width: 240px; }
+}
+
 /* ---------- Testimonials ---------- */
 .stars { color: #ffd166; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 1rem; }
 .quote { color: var(--text); font-size: 1.05rem; line-height: 1.6; }
@@ -625,7 +658,7 @@ footer { border-top: 1px solid var(--border); padding-block: 3rem; }
     .hero .lead { margin-inline: auto; }
     .hero-actions, .compat-chips { justify-content: center; }
     .hero-visual { order: -1; margin-bottom: 1rem; }
-    .hero-visual img { max-width: 320px; }
+    .hero-visual img { max-height: 480px; }
 
     .bento { grid-template-columns: 1fr 1fr; }
     .card.span-3, .card.span-2, .card.span-6 { grid-column: span 2; }
