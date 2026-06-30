@@ -34,8 +34,26 @@
     <meta property="twitter:card" content="summary_large_image"/>
     <meta property="twitter:image" content="images/preview.png"/>
 
+    <link rel="canonical" href="https://trajectoryx.com/"/>
+
     <link rel="stylesheet" href="css/fonts.css"/>
     <link rel="stylesheet" href="css/new.css"/>
+
+    <!-- Structured data for rich search results -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TrajectoryX",
+        "operatingSystem": "iOS",
+        "applicationCategory": "SportsApplication",
+        "description": "TrajectoryX turns your Foresight Sports GCQuad/QuadMAX or Garmin Approach R10 launch monitor into a complete iOS practice studio: live ball flight, Combine tests, drills, online competitions, multi-angle swing video and an AI Coach.",
+        "url": "https://trajectoryx.com/",
+        "image": "https://trajectoryx.com/images/preview.png",
+        "downloadUrl": "https://apps.apple.com/app/trajectoryx/id6502289160",
+        "author": { "@type": "Organization", "name": "TrajectoryX" }
+    }
+    </script>
 </head>
 <body>
 <div class="bg-decor"></div>
@@ -43,7 +61,7 @@
 <!-- ===================== NAVBAR ===================== -->
 <header class="nav" id="nav">
     <a class="brand" href="#home">
-        <img src="images/TrajectoryXIcon.png" alt="TrajectoryX"/>
+        <img src="images/TrajectoryXIcon.png" alt="TrajectoryX" width="34" height="34" decoding="async"/>
         <span>Trajectory<b>X</b></span>
     </a>
     <nav class="nav-links" id="navLinks">
@@ -52,11 +70,12 @@
         <a href="#swing">Swing Video</a>
         <a href="#ai">AI Coach</a>
         <a href="#drills">Drills</a>
+        <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
         <a class="appstore-btn" href="https://apps.apple.com/app/trajectoryx/id6502289160?platform=iphone"
            target="_blank" rel="noopener" aria-label="Download on the App Store">
-            <img src="images/appstore.png" alt="Download on the App Store"/>
+            <img src="images/appstore.png" alt="Download on the App Store" width="775" height="300" decoding="async"/>
         </a>
         <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -73,6 +92,7 @@
     <a href="#swing">Swing Video</a>
     <a href="#ai">AI Coach</a>
     <a href="#drills">Drills</a>
+    <a href="#faq">FAQ</a>
     <a class="btn btn-primary" href="https://apps.apple.com/app/trajectoryx/id6502289160?platform=iphone"
        target="_blank" rel="noopener">Download on the App Store</a>
 </div>
@@ -94,7 +114,7 @@
             <div class="hero-actions reveal" style="--delay:180ms">
                 <a class="appstore-btn" href="https://apps.apple.com/app/trajectoryx/id6502289160?platform=iphone"
                    target="_blank" rel="noopener" aria-label="Download on the App Store">
-                    <img src="images/appstore.png" alt="Download on the App Store"/>
+                    <img src="images/appstore.png" alt="Download on the App Store" width="775" height="300" decoding="async"/>
                 </a>
                 <a class="btn btn-ghost" href="#features">Explore features</a>
             </div>
@@ -115,7 +135,7 @@
                 </defs>
                 <path d="M20 380 C 160 60, 320 40, 480 200" pathLength="1"/>
             </svg>
-            <img src="images/range1_tilt.png" alt="TrajectoryX range view on iPhone"/>
+            <img src="images/range1_tilt.png" alt="TrajectoryX range view on iPhone" width="428" height="700" fetchpriority="high" decoding="async"/>
         </div>
     </div>
 </section>
@@ -150,7 +170,7 @@
                     <h3>Range mode</h3>
                     <p>Set up your environment — temperature, humidity, elevation, units — and see ball, club and trajectory data for every shot, with 2D carry and dispersion.</p>
                 </div>
-                <img class="shot" src="images/range_grouped.png" alt="Range mode shot data"/>
+                <img class="shot" src="images/range_grouped.png" alt="Range mode shot data" width="2472" height="2508" loading="lazy" decoding="async"/>
             </article>
 
             <article class="card span-3 feature-lg reveal" style="--delay:80ms">
@@ -161,7 +181,7 @@
                     <h3>Perfect your driver</h3>
                     <p>Run TM Driver tests to benchmark your speed and accuracy, and make every improvement measurable over time.</p>
                 </div>
-                <img class="shot" src="images/driver.png" alt="Driver testing"/>
+                <img class="shot" src="images/driver.png" alt="Driver testing" width="988" height="1988" loading="lazy" decoding="async"/>
             </article>
 
             <article class="card span-3 feature-lg reveal">
@@ -172,7 +192,7 @@
                     <h3>Wedge &amp; approach game</h3>
                     <p>Combine tests, spin drills and target-circle pitching to random or fixed distances — with shots-gained against the tour average.</p>
                 </div>
-                <img class="shot" src="images/drill_grouped.png" alt="Wedge drills"/>
+                <img class="shot" src="images/drill_grouped.png" alt="Wedge drills" width="2100" height="2300" loading="lazy" decoding="async"/>
             </article>
 
             <article class="card span-3 feature-lg reveal" style="--delay:80ms">
@@ -183,7 +203,7 @@
                     <h3>Online competitions</h3>
                     <p>Compete for the longest drive or the best 10-drive TM score — with friends or globally — and climb the Apple Game Center leaderboards.</p>
                 </div>
-                <img class="shot" src="images/competitions.png" alt="Competitions"/>
+                <img class="shot" src="images/competitions.png" alt="Competitions" width="2000" height="2200" loading="lazy" decoding="async"/>
             </article>
         </div>
     </div>
@@ -327,17 +347,65 @@
     </div>
 </section>
 
+<!-- ===================== FAQ ===================== -->
+<section id="faq">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">FAQ</span>
+            <h2>Frequently asked <span class="grad-text">questions</span></h2>
+        </div>
+        <div class="drills">
+            <details class="drill reveal" open>
+                <summary>Which launch monitors are supported? <span class="plus">+</span></summary>
+                <div class="body">
+                    <p>TrajectoryX works with the Foresight Sports GCQuad and QuadMAX, as well as the Garmin Approach R10 via the E6 Connect protocol. The app connects directly to your launch monitor over Wi-Fi.</p>
+                </div>
+            </details>
+            <details class="drill reveal">
+                <summary>Do I need an internet connection? <span class="plus">+</span></summary>
+                <div class="body">
+                    <p>No — your practice works fully offline and all your data is stored on your device. An internet connection is only needed for online competitions and leaderboards, and for the optional AI Coach.</p>
+                </div>
+            </details>
+            <details class="drill reveal">
+                <summary>Is my data private? <span class="plus">+</span></summary>
+                <div class="body">
+                    <p>Yes. Everything is saved on-device by default and nothing is sent to any server. The only exception is the optional AI Coach: when you enable it and add your own API key, your shot data is sent to the AI provider you chose. See our <a href="privacypolicy/">Privacy Policy</a> for details.</p>
+                </div>
+            </details>
+            <details class="drill reveal">
+                <summary>How does the AI Coach work? <span class="plus">+</span></summary>
+                <div class="body">
+                    <p>The AI Coach analyzes your session and gives you an overall grade, your strengths, what to improve and a targeted drill. You bring your own API key for Claude, ChatGPT or Gemini and choose the provider and model — your key stays on your device.</p>
+                </div>
+            </details>
+            <details class="drill reveal">
+                <summary>What devices does TrajectoryX run on? <span class="plus">+</span></summary>
+                <div class="body">
+                    <p>TrajectoryX is a native app for iPhone and iPad. The layout adapts to both, with extra data shown on larger screens and in landscape.</p>
+                </div>
+            </details>
+            <details class="drill reveal">
+                <summary>How does multi-angle swing video work? <span class="plus">+</span></summary>
+                <div class="body">
+                    <p>One device acts as the master while two more record Down-the-Line and Face-On. When your launch monitor registers a shot, the cameras automatically cut the swing and send it to the master, frame-accurately aligned. This feature is coming soon.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
 <!-- ===================== CTA / DOWNLOAD ===================== -->
 <section id="download">
     <div class="container">
         <div class="cta-wrap reveal">
-            <img class="logo" src="images/TrajectoryXIcon.png" alt="TrajectoryX"/>
+            <img class="logo" src="images/TrajectoryXIcon.png" alt="TrajectoryX" width="84" height="84" loading="lazy" decoding="async"/>
             <h2>Start practicing with purpose</h2>
             <p>Download TrajectoryX for iPhone and iPad and connect your launch monitor in minutes.</p>
             <div class="cta-actions">
                 <a class="appstore-btn" href="https://apps.apple.com/app/trajectoryx/id6502289160?platform=iphone"
                    target="_blank" rel="noopener" aria-label="Download on the App Store">
-                    <img src="images/appstore.png" alt="Download on the App Store"/>
+                    <img src="images/appstore.png" alt="Download on the App Store" width="775" height="300" decoding="async"/>
                 </a>
             </div>
         </div>
@@ -353,13 +421,13 @@
         </div>
         <a class="card crosspromo reveal" href="https://apps.apple.com/app/id6782109540"
            target="_blank" rel="noopener">
-            <img class="crosspromo-logo" src="images/GolfTrainingTimesIcon.png" alt="Golf Training Times app icon"/>
+            <img class="crosspromo-logo" src="images/GolfTrainingTimesIcon.png" alt="Golf Training Times app icon" width="88" height="88" loading="lazy" decoding="async"/>
             <div class="crosspromo-copy">
                 <h3>Golf Training Times</h3>
                 <p>Track your practice time — see exactly where it goes across 12 categories, from driver and putting to swing speed.</p>
             </div>
             <span class="crosspromo-cta">
-                <img src="images/appstore.png" alt="Download Golf Training Times on the App Store"/>
+                <img src="images/appstore.png" alt="Download Golf Training Times on the App Store" width="775" height="300" loading="lazy" decoding="async"/>
             </span>
         </a>
     </div>
@@ -370,7 +438,7 @@
     <div class="container foot">
         <div>
             <a class="brand" href="#home">
-                <img src="images/TrajectoryXIcon.png" alt="TrajectoryX"/>
+                <img src="images/TrajectoryXIcon.png" alt="TrajectoryX" width="34" height="34" decoding="async"/>
                 <span>Trajectory<b>X</b></span>
             </a>
             <small>© <span id="year">2026</span> TrajectoryX · info@TrajectoryX.com</small>
@@ -381,12 +449,21 @@
             <a href="#swing">Swing Video</a>
             <a href="#ai">AI Coach</a>
             <a href="#drills">Drills</a>
+            <a href="#faq">FAQ</a>
             <a href="https://apps.apple.com/de/app/golf-trainingszeiten/id6782109540" target="_blank" rel="noopener">Golf Trainingszeiten</a>
             <a href="privacypolicy/">Privacy</a>
             <a href="https://apps.apple.com/app/trajectoryx/id6502289160?platform=iphone" target="_blank" rel="noopener">Download</a>
         </nav>
     </div>
 </footer>
+
+<!-- Sticky mobile download bar -->
+<a class="mobile-cta" href="https://apps.apple.com/app/trajectoryx/id6502289160?platform=iphone"
+   target="_blank" rel="noopener">
+    <img src="images/TrajectoryXIcon.png" alt="" width="34" height="34" decoding="async"/>
+    <span><b>TrajectoryX</b><small>For iPhone &amp; iPad</small></span>
+    <span class="mobile-cta-btn">Get</span>
+</a>
 
 <button class="top" id="toTop" aria-label="Back to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
