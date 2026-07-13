@@ -59,7 +59,7 @@
     }
 
     /* ---- Active nav link highlighting ---- */
-    var sections = ["features", "devices", "swing", "ai", "drills", "reviews", "pricing", "faq"]
+    var sections = ["features", "gallery", "devices", "swing", "sessions", "ai", "drills", "reviews", "pricing", "faq"]
         .map(function (id) { return document.getElementById(id); })
         .filter(Boolean);
     var linkMap = {};
@@ -74,8 +74,12 @@
                 var link = linkMap[entry.target.id];
                 if (!link) return;
                 if (entry.isIntersecting) {
-                    Object.keys(linkMap).forEach(function (k) { linkMap[k].classList.remove("active"); });
+                    Object.keys(linkMap).forEach(function (k) {
+                        linkMap[k].classList.remove("active");
+                        linkMap[k].removeAttribute("aria-current");
+                    });
                     link.classList.add("active");
+                    link.setAttribute("aria-current", "true");
                 }
             });
         }, { threshold: 0.5 });

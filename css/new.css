@@ -162,7 +162,7 @@ h3 { font-size: 1.3rem; letter-spacing: -0.01em; }
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 1rem clamp(1.25rem, 5vw, 3rem);
+    padding: 1rem clamp(1rem, 3vw, 1.75rem);
     transition: background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease, padding 0.3s ease;
     border-bottom: 1px solid transparent;
 }
@@ -175,16 +175,27 @@ h3 { font-size: 1.3rem; letter-spacing: -0.01em; }
 }
 .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 900; font-size: 1.35rem; letter-spacing: -0.02em; }
 .brand img { width: 34px; height: 34px; border-radius: 9px; }
+/* header uses the full splash wordmark + flight-arc logo instead of the icon (footer keeps the icon) */
+.nav .brand-logo {
+    height: 56px; width: auto;        /* height of the (trimmed) logo itself; box-sizing keeps padding on top */
+    box-sizing: content-box;
+    background: #fff;                 /* white plate so the blue mark keeps splash-screen contrast on the dark nav */
+    border-radius: 12px;
+    padding: 5px 20px;                /* a few px above/below, wider on the sides */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+}
+@media (max-width: 480px) { .nav .brand-logo { height: 44px; padding: 4px 15px; } }
 .brand b { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 
-.nav-links { display: flex; align-items: center; gap: 0.4rem; }
+.nav-links { display: flex; align-items: center; gap: 0.12rem; }
 .nav-links a {
     color: var(--muted);
     font-weight: 700;
-    font-size: 0.92rem;
-    padding: 0.5rem 0.85rem;
+    font-size: 0.85rem;
+    padding: 0.44rem 0.6rem;
     border-radius: 50px;
     transition: color 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--surface); }
 
@@ -218,10 +229,11 @@ h3 { font-size: 1.3rem; letter-spacing: -0.01em; }
     justify-content: center;
     gap: 0.4rem;
     opacity: 0;
+    visibility: hidden;                 /* keep the hidden links out of the tab order (a11y) */
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.mobile-menu.open { opacity: 1; pointer-events: auto; }
+.mobile-menu.open { opacity: 1; visibility: visible; pointer-events: auto; }
 .mobile-menu a {
     font-size: 1.6rem;
     font-weight: 800;
@@ -662,7 +674,7 @@ footer { border-top: 1px solid var(--border); padding-block: 3rem; }
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media (max-width: 980px) {
+@media (max-width: 1040px) {
     .nav-links { display: none; }
     .nav-cta .btn-ghost { display: none; }
     .burger { display: inline-flex; }
