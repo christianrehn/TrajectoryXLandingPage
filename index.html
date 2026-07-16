@@ -16,7 +16,7 @@
 
     <title>TrajectoryX — Golf Analytics, Training, Swing Video &amp; Competitions</title>
     <meta name="description"
-          content="TrajectoryX turns your Foresight Sports GCQuad/QuadMAX or Garmin Approach R10 launch monitor into a complete iOS practice studio: live ball flight, Combine tests, drills, online competitions, automatic swing video, portable session export and an AI Coach."/>
+          content="TrajectoryX turns your Foresight Sports GCQuad, QuadMAX or GC3, or Garmin Approach R10, launch monitor into a complete iOS practice studio: live ball flight, Combine tests, drills, online competitions, automatic swing video, portable session export and an AI Coach."/>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png"/>
@@ -24,8 +24,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png"/>
     <link rel="shortcut icon" href="images/favicon/favicon.ico"/>
     <link rel="manifest" href="images/favicon/site.webmanifest"/>
-    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#009DDC"/>
-    <meta name="theme-color" content="#070b12"/>
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#2997ff"/>
+    <meta name="theme-color" content="#ffffff"/>
 
     <!-- Social preview (absolute URLs so scrapers resolve the image reliably) -->
     <meta property="og:type" content="website"/>
@@ -33,21 +33,23 @@
     <meta property="og:locale" content="en_US"/>
     <meta property="og:url" content="https://trajectoryx.com/"/>
     <meta property="og:title" content="TrajectoryX — Golf Analytics, Training &amp; Swing Video"/>
-    <meta property="og:description" content="Turn your Foresight GCQuad/QuadMAX or Garmin Approach R10 launch monitor into a complete iOS practice studio."/>
+    <meta property="og:description" content="Turn your Foresight GCQuad, QuadMAX or GC3, or Garmin Approach R10, launch monitor into a complete iOS practice studio."/>
     <meta property="og:image" content="https://trajectoryx.com/images/preview.png"/>
     <meta property="og:image:width" content="1350"/>
     <meta property="og:image:height" content="767"/>
     <meta property="og:image:alt" content="TrajectoryX range view with live ball flight, club data and trajectory on iPhone"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="TrajectoryX — Golf Analytics, Training &amp; Swing Video"/>
-    <meta name="twitter:description" content="Turn your Foresight GCQuad/QuadMAX or Garmin Approach R10 launch monitor into a complete iOS practice studio."/>
+    <meta name="twitter:description" content="Turn your Foresight GCQuad, QuadMAX or GC3, or Garmin Approach R10, launch monitor into a complete iOS practice studio."/>
     <meta name="twitter:image" content="https://trajectoryx.com/images/preview.png"/>
     <meta name="twitter:image:alt" content="TrajectoryX range view with live ball flight, club data and trajectory on iPhone"/>
 
     <link rel="canonical" href="https://trajectoryx.com/"/>
 
     <link rel="stylesheet" href="css/fonts.css"/>
-    <link rel="stylesheet" href="css/new.css"/>
+    <link rel="stylesheet" href="css/new.css?v=5"/>
+    <link rel="stylesheet" href="css/light.css?v=5"/>
+    <link rel="stylesheet" href="css/alt-bands.css?v=5"/>
 
     <!-- Structured data for rich search results -->
     <script type="application/ld+json">
@@ -57,13 +59,13 @@
         "name": "TrajectoryX",
         "operatingSystem": "iOS",
         "applicationCategory": "SportsApplication",
-        "description": "TrajectoryX turns your Foresight Sports GCQuad/QuadMAX or Garmin Approach R10 launch monitor into a complete iOS practice studio: live ball flight, Combine tests, drills, online competitions, automatic swing video, session export and an AI Coach.",
+        "description": "TrajectoryX turns your Foresight Sports GCQuad, QuadMAX or GC3, or Garmin Approach R10, launch monitor into a complete iOS practice studio: live ball flight, Combine tests, drills, online competitions, automatic swing video, session export and an AI Coach.",
         "url": "https://trajectoryx.com/",
         "image": "https://trajectoryx.com/images/preview.png",
         "downloadUrl": "https://apps.apple.com/app/trajectoryx/id6502289160",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "featureList": [
-            "Live ball, club and spin data from Foresight GCQuad/QuadMAX and Garmin Approach R10",
+            "Live ball, club and spin data from Foresight GCQuad, QuadMAX and GC3, and Garmin Approach R10",
             "Range mode with 2D carry and dispersion",
             "Combine tests and shots gained",
             "Driver, chip and pitch drills",
@@ -78,6 +80,13 @@
 </head>
 <body>
 <div class="bg-decor"></div>
+
+<!-- ===================== ANNOUNCEMENT (GC3) ===================== -->
+<a class="announce" href="#devices">
+    <span class="announce-tag">New</span>
+    <span class="announce-text">TrajectoryX now works with the Foresight Sports&nbsp;GC3 — live ball, club &amp; spin data over Wi-Fi</span>
+    <span class="announce-arrow" aria-hidden="true">→</span>
+</a>
 
 <!-- ===================== NAVBAR ===================== -->
 <header class="nav" id="nav">
@@ -136,7 +145,7 @@
             </h1>
             <p class="lead reveal" style="--delay:120ms">
                 Practice range shots, Combine tests and wedge drills, compete online, and get
-                automatic swing video and an AI Coach — all from your Foresight GCQuad/QuadMAX or Garmin R10.
+                automatic swing video and an AI Coach — all from your Foresight GCQuad, QuadMAX or GC3, or Garmin R10.
             </p>
             <div class="hero-actions reveal" style="--delay:180ms">
                 <a class="appstore-btn" href="https://apps.apple.com/app/trajectoryx/id6502289160?platform=iphone"
@@ -147,6 +156,7 @@
             </div>
             <div class="compat-chips reveal" style="--delay:240ms">
                 <span class="chip">Foresight GCQuad / QuadMAX</span>
+                <span class="chip">Foresight GC3 · New</span>
                 <span class="chip">Garmin Approach R10 · E6 Connect</span>
             </div>
         </div>
@@ -155,9 +165,9 @@
             <svg class="hero-arc" viewBox="0 0 500 400" preserveAspectRatio="none" aria-hidden="true">
                 <defs>
                     <linearGradient id="arcgrad" x1="0" y1="1" x2="1" y2="0">
-                        <stop offset="0" stop-color="#2f7cff"/>
-                        <stop offset="0.5" stop-color="#009DDC"/>
-                        <stop offset="1" stop-color="#00E0A4"/>
+                        <stop offset="0" stop-color="#2997ff"/>
+                        <stop offset="0.5" stop-color="#0077ed"/>
+                        <stop offset="1" stop-color="#0071e3"/>
                     </linearGradient>
                 </defs>
                 <path d="M20 380 C 160 60, 320 40, 480 200" pathLength="1"/>
@@ -184,15 +194,29 @@
      Neutral wording only — do NOT name the tournament or use its marks. -->
 <style>
     .promo{padding-block:clamp(2.5rem,1.5rem + 4vw,4rem)}
-    .promo-card{position:relative;overflow:hidden;border-radius:var(--radius);padding:clamp(1.6rem,1rem + 3vw,2.8rem);border:1px solid var(--border-2);background:radial-gradient(700px 240px at 92% -30%,rgba(0,224,164,0.18),transparent 60%),var(--surface);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-    .promo-eyebrow{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.78rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-2)}
-    .promo-card h2{margin:0.6rem 0 0.4rem;font-size:clamp(1.5rem,1.1rem + 2.4vw,2.4rem)}
-    .promo-card>p{color:var(--muted);max-width:60ch}
+    /* Full-bleed media background for a section (Apple-style) */
+    .section-media{position:relative;overflow:hidden}
+    .section-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
+    .section-bg-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0.62) 0%,rgba(0,0,0,0.28) 26%,rgba(0,0,0,0.30) 72%,rgba(0,0,0,0.64) 100%)}
+    .section-media>.container{position:relative;z-index:2}
+    #promo{background-image:url(images/grass-wind-poster.jpg);background-size:cover;background-position:center}
+    #gallery{background-image:url(images/range-driving-poster.jpg);background-size:cover;background-position:center}
+    #download{background-image:url(images/aerial-golf-poster.jpg);background-size:cover;background-position:center}
+    @media (prefers-reduced-motion:reduce){.section-bg-video{display:none}}
+    /* the promo card becomes frosted glass over the grass video */
+    .promo-card{position:relative;overflow:hidden;border-radius:var(--radius);padding:clamp(1.6rem,1rem + 3vw,2.8rem);border:1px solid rgba(255,255,255,0.14);background:linear-gradient(180deg,rgba(8,10,14,0.58),rgba(8,10,14,0.68)),radial-gradient(700px 240px at 92% -30%,rgba(41,151,255,0.22),transparent 60%);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);box-shadow:0 24px 60px rgba(0,0,0,0.45)}
+    .promo-eyebrow{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.78rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#2997ff}
+    .promo-card h2{margin:0.6rem 0 0.4rem;font-size:clamp(1.5rem,1.1rem + 2.4vw,2.4rem);color:#fff}
+    .promo-card>p{color:rgba(255,255,255,0.85);max-width:60ch}
     .promo-code-row{display:flex;flex-wrap:wrap;align-items:center;gap:0.9rem;margin:1.4rem 0 0.9rem}
-    .promo-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:1.15rem;font-weight:800;letter-spacing:0.14em;padding:0.6rem 1.1rem;border-radius:12px;border:1px dashed var(--accent-2);background:rgba(0,224,164,0.08);color:var(--text)}
-    .promo-fine{font-size:0.85rem;color:var(--faint);margin-top:0.2rem}
+    .promo-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:1.15rem;font-weight:800;letter-spacing:0.14em;padding:0.6rem 1.1rem;border-radius:12px;border:1px dashed rgba(255,255,255,0.5);background:rgba(255,255,255,0.10);color:#fff}
+    .promo-fine{font-size:0.85rem;color:rgba(255,255,255,0.62);margin-top:0.2rem}
 </style>
-<section id="promo" class="promo">
+<section id="promo" class="promo section-media">
+    <video class="section-bg-video" autoplay muted loop playsinline preload="metadata" poster="images/grass-wind-poster.jpg">
+        <source src="videos/grass-wind-slow.mp4" type="video/mp4"/>
+    </video>
+    <div class="section-bg-scrim"></div>
     <div class="container">
         <div class="promo-card reveal">
             <span class="promo-eyebrow">⛳ Golf's biggest week</span>
@@ -265,7 +289,11 @@
 </section>
 
 <!-- ===================== GALLERY ===================== -->
-<section id="gallery">
+<section id="gallery" class="section-media">
+    <video class="section-bg-video" autoplay muted loop playsinline preload="metadata" poster="images/range-driving-poster.jpg">
+        <source src="videos/range-driving.mp4" type="video/mp4"/>
+    </video>
+    <div class="section-bg-scrim"></div>
     <div class="container">
         <div class="section-head reveal">
             <span class="eyebrow">A look inside</span>
@@ -282,8 +310,8 @@
                 <figcaption>Ball flight model &amp; settings</figcaption>
             </figure>
             <figure class="phone reveal" style="--delay:160ms">
-                <img src="images/shot-connect.png" alt="Connect a GCQuad or Garmin R10 launch monitor" width="1320" height="2868" loading="lazy" decoding="async"/>
-                <figcaption>Connect GCQuad or Garmin R10</figcaption>
+                <img src="images/shot-connect.png" alt="Connect a GCQuad, GC3 or Garmin R10 launch monitor" width="1320" height="2868" loading="lazy" decoding="async"/>
+                <figcaption>Connect GCQuad, GC3 or Garmin R10</figcaption>
             </figure>
         </div>
     </div>
@@ -316,8 +344,8 @@
                 <div class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><circle cx="12" cy="11" r="3"/></svg>
                 </div>
-                <h3>Foresight Sports GC3 <span class="tag">Coming soon</span></h3>
-                <p>GC3 support is on the way in an upcoming update — your Foresight Sports GC3 will get the full TrajectoryX experience, just like the GCQuad and QuadMAX.</p>
+                <h3>Foresight Sports GC3 <span class="tag">New</span></h3>
+                <p>Connect your Foresight Sports GC3 over Wi-Fi and get the full TrajectoryX experience — live ball, club and spin data on the range, just like the GCQuad and QuadMAX.</p>
             </article>
         </div>
     </div>
@@ -558,7 +586,7 @@
             <details class="drill reveal">
                 <summary>Which launch monitors are supported? <span class="plus">+</span></summary>
                 <div class="body">
-                    <p>TrajectoryX works with the Foresight Sports GCQuad and QuadMAX, as well as the Garmin Approach R10 via the E6 Connect protocol. The app connects directly to your launch monitor over Wi-Fi.</p>
+                    <p>TrajectoryX works with the Foresight Sports GCQuad, QuadMAX and GC3, as well as the Garmin Approach R10 via the E6 Connect protocol. The app connects directly to your launch monitor over Wi-Fi — for the GC3 either through its own hotspot or over your local network.</p>
                 </div>
             </details>
             <details class="drill reveal">
@@ -609,7 +637,11 @@
 </section>
 
 <!-- ===================== CTA / DOWNLOAD ===================== -->
-<section id="download">
+<section id="download" class="section-media">
+    <video class="section-bg-video" autoplay muted loop playsinline preload="metadata" poster="images/aerial-golf-poster.jpg">
+        <source src="videos/aerial-golf.mp4" type="video/mp4"/>
+    </video>
+    <div class="section-bg-scrim"></div>
     <div class="container">
         <div class="cta-wrap reveal">
             <img class="logo" src="images/TrajectoryXIcon.png" alt="TrajectoryX" width="84" height="84" loading="lazy" decoding="async"/>
@@ -686,6 +718,6 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
-<script src="js/new.js"></script>
+<script src="js/new.js?v=3"></script>
 </body>
 </html>

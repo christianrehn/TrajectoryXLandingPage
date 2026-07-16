@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Alternating light/dark section bands (Apple-style).
+   Loaded AFTER light.css — the page base stays light; the sections listed
+   below become dark bands, each re-scoping the palette so their text and
+   cards adapt. Rhythm (top → bottom):
+     hero + stats            → light
+     promo + features + gallery   → DARK
+     devices + swing         → light
+     sessions + ai + drills  → DARK
+     reviews + pricing       → light
+     faq + download + moreapps + footer → DARK
+   ========================================================================== */
+
+/* breathing room where the light stats band meets the dark promo band:
+   the stats section ships with an inline `padding-block:0`, so its card butts
+   straight against the black. Add space (more below) so white and black don't touch. */
+.hero + section {
+    padding-top: clamp(1.5rem, 1rem + 2vw, 2.5rem) !important;
+    padding-bottom: clamp(3.5rem, 2.2rem + 4vw, 5.5rem) !important;
+}
+
+#promo, #features, #gallery,
+#sessions, #ai, #drills,
+#faq, #download, #moreapps,
+footer {
+    background: #000000;
+    color: #b9b9c2; /* muted light-grey headings on black (pure white / near-white was too harsh) */
+
+    /* re-scope tokens to dark for everything inside this band */
+    --text:      #f5f5f7;
+    --muted:     #c7c7cc;
+    --faint:     #9a9aa0;
+    --surface:   rgba(255, 255, 255, 0.05);
+    --surface-2: rgba(255, 255, 255, 0.08);
+    --border:    rgba(255, 255, 255, 0.10);
+    --border-2:  rgba(255, 255, 255, 0.16);
+    --accent:    #2997ff;
+    --accent-3:  #2997ff;
+    --grad-text: linear-gradient(180deg, #7ab8ff 0%, #2997ff 100%);
+    --shadow:    0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* cards in dark bands: drop the light-theme drop shadow, use a hairline instead */
+#promo   :is(.feature-card, .device-card, .plan, .review, .session-card, .faq details),
+#features :is(.feature-card, .device-card, .plan, .review, .session-card),
+#gallery :is(.feature-card, .device-card, .plan, .review, .session-card),
+#sessions :is(.feature-card, .device-card, .plan, .review, .session-card),
+#ai      :is(.feature-card, .device-card, .plan, .review, .session-card),
+#drills  :is(.feature-card, .device-card, .plan, .review, .session-card),
+#faq     details,
+#download :is(.feature-card, .device-card, .plan, .review, .session-card),
+#moreapps :is(.feature-card, .device-card, .plan, .review, .session-card) {
+    box-shadow: none;
+}

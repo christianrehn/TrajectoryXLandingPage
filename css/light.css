@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Apple LIGHT theme — override layer loaded AFTER new.css.
+   Redefines the design tokens + the few dark-hardcoded rules for a
+   clean white Apple look (white / #f5f5f7 surfaces, near-black text,
+   single Apple blue accent).
+   ========================================================================== */
+
+:root {
+    --bg:        #ffffff;
+    --bg-2:      #f5f5f7;
+    --surface:   rgba(0, 0, 0, 0.04);
+    --surface-2: rgba(0, 0, 0, 0.06);
+    --border:    rgba(0, 0, 0, 0.10);
+    --border-2:  rgba(0, 0, 0, 0.14);
+
+    --text:   #1d1d1f;
+    --muted:  #6e6e73;
+    --faint:  #86868b;
+
+    --accent:   #0071e3;
+    --accent-2: #0077ed;
+    --accent-3: #0071e3;
+
+    --grad:      linear-gradient(180deg, #2997ff 0%, #0071e3 100%);
+    --grad-text: linear-gradient(180deg, #0a84ff 0%, #0060df 100%);
+
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+    --glow:   0 0 60px rgba(41, 151, 255, 0.16);
+}
+
+/* clean white background with a faint blue wash instead of dark glows */
+.bg-decor {
+    background:
+        radial-gradient(1000px 620px at 82% -10%, rgba(41, 151, 255, 0.10), transparent 60%),
+        radial-gradient(820px 600px at 10% 2%, rgba(41, 151, 255, 0.06), transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+}
+/* grid hairlines flip to dark-on-light, very faint */
+.bg-decor::after {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+/* nav + mobile menu surfaces flip to translucent white */
+.nav.scrolled {
+    background: rgba(255, 255, 255, 0.72);
+    border-bottom-color: var(--border);
+}
+.mobile-menu { background: rgba(255, 255, 255, 0.96); }
+
+/* logo needs no white plate on a white page */
+.nav .brand-logo {
+    background: transparent;
+    box-shadow: none;
+    padding: 5px 0;
+}
+
+/* subtle cards get a hairline + soft shadow so they read on white */
+.feature-card,
+.device-card,
+.plan,
+.review,
+.session-card,
+.faq details {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.05);
+}
