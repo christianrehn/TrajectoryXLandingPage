@@ -16,7 +16,7 @@
 
     <title>TrajectoryX — Golf Analytics, Training, Swing Video &amp; Competitions</title>
     <meta name="description"
-          content="TrajectoryX turns your Foresight Sports GCQuad, QuadMAX or GC3, Bushnell Launch Pro, TrackMan 4, or Garmin Approach R10, launch monitor into a complete iOS practice studio: live ball flight, Combine tests, drills you can build yourself, online competitions, automatic swing video with measured body metrics, a realistic 3D shot replay, portable session export and an AI Coach."/>
+          content="TrajectoryX turns your Foresight Sports GCQuad, QuadMAX or GC3, Bushnell Launch Pro, TrackMan 4, or Garmin Approach R10, launch monitor into a complete iOS practice studio: live ball flight, Combine tests, drills you can build yourself, online competitions, automatic swing video with a broadcast-style ball tracer, a realistic 3D shot replay, portable session export and an AI Coach."/>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png"/>
@@ -71,8 +71,8 @@
             "Driver, chip and pitch drills",
             "Custom drills - build your own Skill Games and Precision Drills from templates",
             "Online competitions and Game Center leaderboards",
-            "Automatic swing video with auto-detected swing points, skeleton overlay and practice-swing detection",
-            "Body metrics measured from face-on swing video: shoulder turn and X-factor as data points",
+            "Automatic swing video with auto-detected swing points and practice-swing detection",
+            "Ball tracer drawn into the swing video from the trajectory the launch monitor measured",
             "3D Range - replay your shot in a mountain or ocean driving range, in a comic or a realistic look, with an orange ball tracer (Follow, Down the Line, Overhead and Free cameras)",
             "Session export and import (shots and swing videos)",
             "AI Coach with your own Claude, ChatGPT or Gemini key"
@@ -87,8 +87,8 @@
 <!-- ===================== ANNOUNCEMENT (v8.4) ===================== -->
 <a class="announce" href="#drills">
     <span class="announce-tag">New in 8.4</span>
-    <span class="announce-text announce-text--full">Build your own drills — targets, zones and club rules, scored like the built&#8209;in ones — and the app now tags your practice swings by itself</span>
-    <span class="announce-text announce-text--short">Build your own drills — and the app tags your practice swings</span>
+    <span class="announce-text announce-text--full">Build your own drills — targets, zones and club rules, scored like the built&#8209;in ones — and see your ball flight traced into your swing video</span>
+    <span class="announce-text announce-text--short">Build your own drills — and trace your ball flight in your video</span>
     <span class="announce-arrow" aria-hidden="true">→</span>
 </a>
 
@@ -322,7 +322,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><circle cx="12" cy="11" r="3"/></svg>
                 </div>
                 <h3>Foresight GC3, GC3S &amp; Bushnell Launch Pro</h3>
-                <p>Connect your Foresight Sports GC3 or GC3S — or the Bushnell Launch Pro, which shares the very same connection — over Wi-Fi and get the full TrajectoryX experience: live ball, club and spin data on the range, just like the GCQuad and QuadMAX.</p>
+                <p>Connect your Foresight Sports GC3 or GC3S — or the Bushnell Launch Pro, which shares the very same connection — and get the full TrajectoryX experience: live ball, club and spin data on the range, just like the GCQuad and QuadMAX. <b>New: connect over Bluetooth</b> instead of the unit's Wi-Fi hotspot, and your iPhone stays on your normal network with its internet intact.</p>
             </article>
             <article class="card reveal" style="--delay:160ms">
                 <div class="icon">
@@ -374,11 +374,7 @@
                 </li>
                 <li>
                     <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                    <span><b>Body metrics, measured <span class="tag">New</span></b>Film face-on and TrajectoryX reads your <b>shoulder turn</b> and <b>X&#8209;factor</b> at the top straight from the video — no sensors, no suit. They're stored as data points with each shot, averages included, and the AI Coach reads them too.</span>
-                </li>
-                <li>
-                    <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                    <span><b>Skeleton &amp; joint angles</b>Pause anywhere and see your posture drawn on the frame — joints, bones and the angles between them.</span>
+                    <span><b>Ball tracer in your video <span class="tag">New</span></b>Watch the ball leave the frame and keep going: TrajectoryX draws the flight into your swing video like a TV broadcast — the <b>real curve your launch monitor measured</b>, traced over your own shot.</span>
                 </li>
                 <li>
                     <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
@@ -400,6 +396,7 @@
             <div class="roadmap">
                 <span class="soon">On the roadmap</span>
                 <p><b>Multiple iPhones, multiple perspectives.</b> Set up several iPhones or iPads around you and capture the same swing from different angles — Down-the-Line, Face-On and more — all recording at once and automatically synced to the same shot, so you can review every perspective side by side. Ball-line and swing-plane guides on the video are coming too.</p>
+                <p><b>Your body, measured from the video.</b> Shoulder turn, X&#8209;factor and a skeleton drawn on the paused frame — read straight from a face-on clip, no sensors and no suit. The measurement works; what it still needs is calibration we trust enough to put a number in front of you, so it stays off until then.</p>
             </div>
         </div>
         <div class="visual reveal" style="--delay:100ms">
@@ -509,7 +506,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11H4l3.5 9L11 11h5"/><path d="M14 4l1.2 3.5L18 8l-2.8 1.2L14 12l-1.2-2.8L10 8l2.8-0.5z"/></svg>
                 </div>
                 <h3>One-tap session analysis</h3>
-                <p>An overall grade for your session, your strengths, what to improve and a targeted drill to work on next — picked from the app's own drills, all from a single tap. When your swing videos carry body metrics, the analysis connects your body motion to your ball flight.</p>
+                <p>An overall grade for your session, your strengths, what to improve and a targeted drill to work on next — picked from the app's own drills, all from a single tap.</p>
             </article>
             <article class="card span-2 reveal" style="--delay:80ms">
                 <div class="icon">
@@ -661,7 +658,7 @@
             <details class="drill reveal">
                 <summary>Which launch monitors are supported? <span class="plus">+</span></summary>
                 <div class="body">
-                    <p>TrajectoryX works with the Foresight Sports GCQuad, QuadMAX, GC3 and GC3S, the Bushnell Launch Pro — which shares the GC3 connection — and the TrackMan 4, as well as the Garmin Approach R10 via the E6 Connect protocol and DIY units running OpenFlight. Support for the fixed-install Foresight GCHawk and Falcon is experimental for now. The app connects directly to your launch monitor over Wi-Fi — for the GC3 family either through its own hotspot or over your local network.</p>
+                    <p>TrajectoryX works with the Foresight Sports GCQuad, QuadMAX, GC3 and GC3S, the Bushnell Launch Pro — which shares the GC3 connection — and the TrackMan 4, as well as the Garmin Approach R10 via the E6 Connect protocol and DIY units running OpenFlight. Support for the fixed-install Foresight GCHawk and Falcon is experimental for now. The app connects directly to your launch monitor — over Wi-Fi through the unit's own hotspot or your local network, and for the GC3 family now over Bluetooth as well, which leaves your iPhone on its normal network.</p>
                 </div>
             </details>
             <details class="drill reveal">
@@ -679,7 +676,7 @@
             <details class="drill reveal">
                 <summary>How does the AI Coach work? <span class="plus">+</span></summary>
                 <div class="body">
-                    <p>The AI Coach analyzes your session and gives you an overall grade, your strengths, what to improve and a targeted drill — picked from the app's own drills, so you can start it right away. If your swing videos carry body metrics (shoulder turn, X-factor), the analysis connects them to your ball data. You bring your own API key for Claude, ChatGPT or Gemini and choose the provider and model — your key stays on your device.</p>
+                    <p>The AI Coach analyzes your session and gives you an overall grade, your strengths, what to improve and a targeted drill — picked from the app's own drills, so you can start it right away. You bring your own API key for Claude, ChatGPT or Gemini and choose the provider and model — your key stays on your device.</p>
                 </div>
             </details>
             <details class="drill reveal">
@@ -691,15 +688,15 @@
             <details class="drill reveal">
                 <summary>How does swing video work? <span class="plus">+</span></summary>
                 <div class="body">
-                    <p>Hit your shot and TrajectoryX records your swing on its own, then plays it back in slow motion — it detects the key swing points (Start, Top, Impact, End) so you can jump straight to them and step through frame by frame. It can draw your skeleton with joint angles on the paused frame, and practice swings that didn't hit a ball are flagged automatically. No launch monitor required, and it pairs perfectly with one.</p>
+                    <p>Hit your shot and TrajectoryX records your swing on its own, then plays it back in slow motion — it detects the key swing points (Start, Top, Impact, End) so you can jump straight to them and step through frame by frame. Practice swings that didn't hit a ball are flagged automatically, and when a launch monitor measured the shot, the app can trace the ball's flight into the video. No launch monitor required, and it pairs perfectly with one.</p>
                     <p>Ball-line and swing-plane guides on the video and multi-angle recording with several devices are planned for a later update.</p>
                 </div>
             </details>
             <details class="drill reveal">
-                <summary>Can TrajectoryX measure my body — like shoulder turn? <span class="plus">+</span></summary>
+                <summary>What is the ball tracer in my swing video? <span class="plus">+</span></summary>
                 <div class="body">
-                    <p>Yes. Film your swing face-on and TrajectoryX measures your <b>shoulder turn</b> and <b>X-factor</b> at the top of the backswing straight from the video — no sensors, no vest. The numbers are stored as data points with each shot, so they show up in the Data tab and the shot table with averages, and the optional AI Coach reads them alongside your ball data.</p>
-                    <p>Treat them as honest measurements with a small tolerance: they support your feel and your coach — they don't replace either.</p>
+                    <p>The flight of the ball, drawn into your own video the way TV coverage traces a drive. It is not a guess from the footage: the curve is the <b>trajectory your launch monitor measured</b> for that exact shot, laid over the frame and timed to the moment of impact — so the ball leaves the picture and the line carries on to where it actually landed.</p>
+                    <p>Tap the tracer button in the video player. It appears whenever the clip belongs to a shot your launch monitor recorded.</p>
                 </div>
             </details>
             <details class="drill reveal">
