@@ -772,12 +772,16 @@ footer { border-top: 1px solid var(--border); padding-block: 3rem; }
 
 /* The banner is fixed and the nav is pushed down by --announce-h, so that variable has to stay at
    or above the banner's REAL height at every width — otherwise the nav slides underneath it and
-   clips the logo. The full sentence breaks into a new line five times between 320px and 1100px, so
-   pinning a height per break would mean five magic numbers tied to one string. Instead the copy
-   itself shortens below 1200px, which keeps the banner on one line all the way down to 360px.
-   Both thresholds sit a good margin clear of the measured break (the long line breaks at a ~1085px
-   BANNER width, i.e. ~1100px viewport once a 15px scrollbar is subtracted — so measure in a real
-   viewport, not on a width-constrained clone). Measured 2026-08-27; re-measure when the text
+   clips the logo. Pinning a height per line break would mean a magic number per break, all tied to
+   one string; instead the copy itself shortens below the threshold below, which keeps the banner on
+   one line all the way down to 360px.
+   Re-measured 2026-09-20 for the tile-challenges copy: the full sentence needs a 676px BANNER width
+   (517px text + 90px tag + 17px arrow + 51px padding and gaps), so it fits from roughly a 700px
+   viewport up. The threshold sits at 780px — a good margin clear, as the 2026-08-27 note demands,
+   because the exact wrap width shifts with the scrollbar (15px here, 0 on a real iPhone). The
+   previous copy was far longer and needed 1199px; leaving the threshold there would have shown the
+   short line to every laptop window under 1200px for no reason.
+   ★ Measure in a real viewport, never on a width-constrained clone, and re-measure when the text
    changes. */
 .announce-text--short { display: none; }
 
@@ -785,7 +789,7 @@ footer { border-top: 1px solid var(--border); padding-block: 3rem; }
 .nav { top: var(--announce-h); }
 html { scroll-padding-top: calc(var(--announce-h) + 84px); }
 
-@media (max-width: 1199px) {
+@media (max-width: 779px) {
     .announce-text--full { display: none; }
     .announce-text--short { display: inline; }
 }
