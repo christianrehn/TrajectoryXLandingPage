@@ -59,7 +59,7 @@
     }
 
     /* ---- Active nav link highlighting ---- */
-    var sections = ["features", "gallery", "devices", "swing", "sessions", "ai", "drills", "reviews", "pricing", "faq"]
+    var sections = ["features", "gallery", "devices", "swing", "sessions", "ai", "challenges", "drills", "reviews", "pricing", "faq"]
         .map(function (id) { return document.getElementById(id); })
         .filter(Boolean);
     var linkMap = {};

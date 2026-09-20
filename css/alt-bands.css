@@ -6,7 +6,7 @@
      hero + stats            → light
      promo + features + gallery   → DARK
      devices + swing         → light
-     sessions + ai + drills  → DARK
+     sessions + ai + challenges + drills → DARK
      reviews + pricing       → light
      faq + download + moreapps + footer → DARK
    ========================================================================== */
@@ -20,7 +20,7 @@
 }
 
 #promo, #features, #gallery,
-#sessions, #ai, #drills,
+#sessions, #ai, #challenges, #drills,
 #faq, #download, #moreapps,
 footer {
     background: #000000;
@@ -46,6 +46,7 @@ footer {
 #gallery :is(.feature-card, .device-card, .plan, .review, .session-card),
 #sessions :is(.feature-card, .device-card, .plan, .review, .session-card),
 #ai      :is(.feature-card, .device-card, .plan, .review, .session-card),
+#challenges :is(.feature-card, .device-card, .plan, .review, .session-card),
 #drills  :is(.feature-card, .device-card, .plan, .review, .session-card),
 #faq     details,
 #download :is(.feature-card, .device-card, .plan, .review, .session-card),
