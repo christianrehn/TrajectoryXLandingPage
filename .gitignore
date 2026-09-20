@@ -2,3 +2,6 @@
 /.idea/
 .DS_Store
 **/.DS_Store
+
+# Arbeitsstaende, die bewusst NICHT deployt werden (ein Push hier ist ein Live-Deploy)
+.unversioned-wip/
