@@ -770,12 +770,36 @@ footer { border-top: 1px solid var(--border); padding-block: 3rem; }
 .announce-arrow { flex: none; font-weight: 900; transition: transform 0.2s ease; }
 .announce:hover .announce-arrow { transform: translateX(4px); }
 
+/* The banner is fixed and the nav is pushed down by --announce-h, so that variable has to stay at
+   or above the banner's REAL height at every width — otherwise the nav slides underneath it and
+   clips the logo. The full sentence breaks into a new line five times between 320px and 1100px, so
+   pinning a height per break would mean five magic numbers tied to one string. Instead the copy
+   itself shortens below 1200px, which keeps the banner on one line all the way down to 360px.
+   Both thresholds sit a good margin clear of the measured break (the long line breaks at a ~1085px
+   BANNER width, i.e. ~1100px viewport once a 15px scrollbar is subtracted — so measure in a real
+   viewport, not on a width-constrained clone). Measured 2026-08-27; re-measure when the text
+   changes. */
+.announce-text--short { display: none; }
+
 /* push the fixed nav below the banner; keep anchor jumps clear of banner + nav */
 .nav { top: var(--announce-h); }
 html { scroll-padding-top: calc(var(--announce-h) + 84px); }
+
+@media (max-width: 1199px) {
+    .announce-text--full { display: none; }
+    .announce-text--short { display: inline; }
+}
 
 @media (max-width: 620px) {
     :root { --announce-h: 56px; }
     .announce-text { font-size: 0.8rem; }
     .announce { gap: 0.45rem; padding: 0.4rem 0.7rem; }
+}
+
+/* Below 360px even the short copy wraps (76px measured at a 320px viewport). The exact wrap width
+   shifts with the scrollbar — 15px wide here, 0 on a real iPhone — so this threshold is set wide
+   rather than tight: between 330 and 359px the bar carries up to ~23px of slack. Slack is only
+   cosmetic; too little reserved height would put the nav back under the banner. */
+@media (max-width: 359px) {
+    :root { --announce-h: 78px; }
 }
