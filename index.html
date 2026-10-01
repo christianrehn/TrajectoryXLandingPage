@@ -16,7 +16,7 @@
 
     <title>TrajectoryX — Golf Analytics, Training, Swing Video &amp; Competitions</title>
     <meta name="description"
-          content="TrajectoryX turns your Foresight Sports GCQuad, QuadMAX or GC3, Bushnell Launch Pro, TrackMan 4, Full Swing KIT, or Garmin Approach R10, launch monitor into a complete iOS practice studio: live ball flight, Combine tests, drills you can build yourself, corridor tiles you can turn into challenges, online competitions, automatic swing video with a broadcast-style ball tracer, a realistic 3D shot replay, portable session export and an AI Coach."/>
+          content="TrajectoryX turns your Foresight Sports GCQuad, QuadMAX or GC3, Bushnell Launch Pro, TrackMan 4, Full Swing KIT, or Garmin Approach R10, launch monitor into a complete iOS practice studio: live ball flight, Combine tests, drills you can build yourself, corridor tiles you can turn into challenges, online competitions, automatic swing video with a broadcast-style ball tracer, a realistic 3D shot replay, portable session export and an optional AI Coach."/>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png"/>
@@ -47,7 +47,7 @@
     <link rel="canonical" href="https://trajectoryx.com/"/>
 
     <link rel="stylesheet" href="css/fonts.css"/>
-    <link rel="stylesheet" href="css/new.css?v=9"/>
+    <link rel="stylesheet" href="css/new.css?v=10"/>
     <link rel="stylesheet" href="css/light.css?v=6"/>
     <link rel="stylesheet" href="css/alt-bands.css?v=7"/>
 
@@ -59,24 +59,28 @@
         "name": "TrajectoryX",
         "operatingSystem": "iOS",
         "applicationCategory": "SportsApplication",
-        "description": "TrajectoryX turns your Foresight Sports GCQuad, QuadMAX or GC3, Bushnell Launch Pro, TrackMan 4, Full Swing KIT, or Garmin Approach R10, launch monitor into a complete iOS practice studio: live ball flight, Combine tests, drills, online competitions, automatic swing video, a realistic 3D shot replay, session export and an AI Coach.",
+        "description": "TrajectoryX turns your Foresight Sports GCQuad, QuadMAX or GC3, Bushnell Launch Pro, TrackMan 4, Full Swing KIT, or Garmin Approach R10, launch monitor into a complete iOS practice studio: live ball flight, Combine tests, drills you can build yourself, corridor tiles you can turn into challenges, online competitions, automatic swing video with a broadcast-style ball tracer, a realistic 3D shot replay, portable session export and an optional AI Coach.",
         "url": "https://trajectoryx.com/",
         "image": "https://trajectoryx.com/images/preview.png",
         "downloadUrl": "https://apps.apple.com/app/trajectoryx/id6502289160",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "featureList": [
             "Live ball, club and spin data from Foresight GCQuad, QuadMAX and GC3, Bushnell Launch Pro, TrackMan 4, Full Swing KIT, Garmin Approach R10 and OpenFlight",
-            "Range mode with 2D carry and dispersion, flag and green with tap-to-aim",
+            "Guided connection with help that names the cause, and Bluetooth for Foresight GCQuad and GC3",
+            "Range mode with top and side views, dispersion ellipses per club, a full shot table with CSV and Excel export, and a flag and green you drag and shape – with TM Score and strokes gained against the flag",
+            "Carry and Total three ways: along the target line, offline and diagonal",
             "Combine tests and shots gained",
             "Driver, chip and pitch drills",
             "Custom drills - build your own Skill Games and Precision Drills from templates",
             "Tile challenges - turn a data tile into a streak, target, record or timed game, alone or several tiles combined",
             "Online competitions and Game Center leaderboards",
             "Automatic swing video with auto-detected swing points and practice-swing detection",
-            "Ball tracer drawn into the swing video from the trajectory the launch monitor measured",
+            "Ball tracer drawn into the swing video from the flight the app computes from your launch monitor's data",
             "3D Range - replay your shot in a mountain or ocean driving range, in a comic or a realistic look, with an orange ball tracer (Follow, Down the Line, Overhead and Free cameras)",
             "Session export and import (shots and swing videos)",
-            "AI Coach with your own Claude, ChatGPT or Gemini key"
+            "Great on iPad: Split View, resizable windows and floating panels over the 3D range",
+            "Last Session widget for Home and Lock Screen, and a Record Swing control",
+            "Optional AI Coach with your own Claude, ChatGPT or Gemini key"
         ],
         "author": { "@type": "Organization", "name": "TrajectoryX" }
     }
@@ -153,8 +157,8 @@
                 a complete <span class="grad-text">practice studio</span>
             </h1>
             <p class="lead reveal" style="--delay:120ms">
-                Practice range shots, Combine tests and wedge drills, compete online, and get
-                automatic swing video and an AI Coach — all from your Foresight GCQuad, QuadMAX, GC3 or Bushnell Launch Pro, TrackMan 4, Full Swing KIT, or Garmin R10.
+                Practice range shots, Combine tests and drills you build yourself, turn any data tile
+                into a challenge, compete online, and get automatic swing video with a TV-style ball tracer — all from your Foresight GCQuad, QuadMAX, GC3 or Bushnell Launch Pro, TrackMan 4, Full Swing KIT, or Garmin R10.
             </p>
             <div class="hero-actions reveal" style="--delay:180ms">
                 <a class="appstore-btn" href="https://apps.apple.com/app/trajectoryx/id6502289160?platform=iphone"
@@ -188,90 +192,470 @@
 <section style="padding-block: 0;">
     <div class="container">
         <div class="stats reveal">
-            <div class="stat"><b>10</b><span>Launch monitors</span></div>
-            <div class="stat"><b>4</b><span>Drill types</span></div>
+            <div class="stat"><b>11</b><span>Launch monitors</span></div>
+            <div class="stat"><b>6</b><span>Drill types</span></div>
             <div class="stat"><b>Free</b><span>All core features</span></div>
             <div class="stat"><b>100%</b><span>On-device by default</span></div>
         </div>
     </div>
 </section>
 
-<!-- ===================== SEASONAL PROMO (time-limited) ===================== -->
-<!-- Remove or update after 19 July 2026. Code OPEN26 must exist as a Custom Offer Code in App Store Connect.
-     Neutral wording only — do NOT name the tournament or use its marks. -->
+<!-- ===================== FULL-BLEED MEDIA SECTIONS ===================== -->
+<!-- Shared styles for the sections with a video background (#gallery, #download). The time-limited
+     summer promo these were first written for has been removed, and its rules with it. -->
 <style>
-    .promo{padding-block:clamp(2.5rem,1.5rem + 4vw,4rem)}
     /* Full-bleed media background for a section (Apple-style) */
     .section-media{position:relative;overflow:hidden}
     .section-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
     .section-bg-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0.62) 0%,rgba(0,0,0,0.28) 26%,rgba(0,0,0,0.30) 72%,rgba(0,0,0,0.64) 100%)}
     .section-media>.container{position:relative;z-index:2}
-    #promo{background-image:url(images/grass-wind-poster.jpg);background-size:cover;background-position:center}
     #gallery{background-image:url(images/range-driving-poster.jpg);background-size:cover;background-position:center}
     #download{background-image:url(images/aerial-golf-poster.jpg);background-size:cover;background-position:center}
     @media (prefers-reduced-motion:reduce){.section-bg-video{display:none}}
-    /* the promo card becomes frosted glass over the grass video */
-    .promo-card{position:relative;overflow:hidden;border-radius:var(--radius);padding:clamp(1.6rem,1rem + 3vw,2.8rem);border:1px solid rgba(255,255,255,0.14);background:linear-gradient(180deg,rgba(8,10,14,0.58),rgba(8,10,14,0.68)),radial-gradient(700px 240px at 92% -30%,rgba(41,151,255,0.22),transparent 60%);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);box-shadow:0 24px 60px rgba(0,0,0,0.45)}
-    .promo-eyebrow{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.78rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#2997ff}
-    .promo-card h2{margin:0.6rem 0 0.4rem;font-size:clamp(1.5rem,1.1rem + 2.4vw,2.4rem);color:#fff}
-    .promo-card>p{color:rgba(255,255,255,0.85);max-width:60ch}
-    .promo-code-row{display:flex;flex-wrap:wrap;align-items:center;gap:0.9rem;margin:1.4rem 0 0.9rem}
-    .promo-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:1.15rem;font-weight:800;letter-spacing:0.14em;padding:0.6rem 1.1rem;border-radius:12px;border:1px dashed rgba(255,255,255,0.5);background:rgba(255,255,255,0.10);color:#fff}
-    .promo-fine{font-size:0.85rem;color:rgba(255,255,255,0.62);margin-top:0.2rem}
 </style>
 <!-- ===================== FEATURES ===================== -->
+<!-- Layout: section head → five HIGHLIGHT cards (div#features-highlights) → an index of the five
+     detail groups (jump chips) → the five groups (div.fgroup, NOT sections — the scrollspy in
+     js/new.js keeps its fixed list). Highlight and group titles are h3, card titles h4.
+     A highlight REPLACES the matching detail cards (drill builder → highlight (b), which took over
+     the former "Practice with a goal" group; swing recording, swing points and tracer → (a); Tile
+     Challenges + Corridors → (c); "Your shot in 3D" → (d)), so no motif or text appears twice in
+     this section — a detail group only adds what its highlight doesn't say.
+     Ball flight wording: always "computed from your launch monitor's data", never "measured".
+     Nothing here may advertise a feature whose flag is off in Shared/Main/AppDelegate.swift.
+     Launch-monitor order in every list: Foresight → Bushnell → TrackMan 4 → the rest → OpenFlight last. -->
 <section id="features">
     <div class="container">
         <div class="section-head reveal">
             <span class="eyebrow">Features</span>
             <h2>Everything you need to <span class="grad-text">practice with purpose</span></h2>
-            <p>From the range to the wedge game to global competitions — all driven by your launch monitor's real ball and club data.</p>
+            <p>Your launch monitor measures the ball and the club. TrajectoryX makes those numbers work for you: a range you read at a glance, games and drills that score every ball, and swing videos with the computed flight drawn in — on iPhone and iPad.</p>
         </div>
 
-        <div class="bento">
-            <article class="card span-3 feature-lg reveal">
-                <div>
-                    <div class="icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M19 9l-5 5-4-4-3 3"/></svg>
+        <!-- ---------- Highlights ---------- -->
+        <div class="fhighlights" id="features-highlights">
+            <div class="bento">
+                <!-- (a) Swing video analysis -->
+                <article class="card span-6 feature-hero hl reveal">
+                    <div class="hl-copy">
+                        <p class="hl-kicker">Swing video analysis <span class="tag">Ball tracer new in 8.4</span></p>
+                        <h3>Swing video that films itself — <span class="grad-text">and traces the ball</span></h3>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                <span><b>Records on its own</b>Every shot your launch monitor reports gets its own clip, with a small live preview floating over the range; without a monitor, the strike itself triggers the recording — or you press Start and Stop yourself. Start the swing camera from the Lock Screen, Control Center or the Action button (iOS&nbsp;18+).</span>
+                            </li>
+                            <li>
+                                <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                <span><b>Key moments, found for you</b>Start, Top, Impact and End are marked for you — one tap jumps to the moment that matters.</span>
+                            </li>
+                            <li>
+                                <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                <span><b>Slow motion down to ⅛ speed</b>Step frame by frame through clips filmed at up to 240&nbsp;fps, depending on your iPhone.</span>
+                            </li>
+                            <li>
+                                <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                <span><b>A TV-style ball tracer</b>The flight the app computes from your launch monitor's data, drawn over your own shot right out to where it lands — one tap on your phone's clip of any shot your monitor recorded.</span>
+                            </li>
+                            <li>
+                                <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                <span><b>Less clutter, more music</b>Practice swings are tagged on their own, a heart keeps your favorites, and your music keeps playing while you film.</span>
+                            </li>
+                        </ul>
+                        <p class="hl-fine">Free: five swing recordings a day — unlimited with Pro. Imported clips never count.</p>
+                        <a class="more" href="#swing">More on swing video</a>
                     </div>
-                    <h3>Range mode</h3>
-                    <p>Set up your environment — temperature, humidity, elevation, units — and see ball, club and trajectory data for every shot, with 2D carry and dispersion. The values live in their own <b>Data</b> tab, so the graphics get the full width — hide what you don't need, reorder the rest, and read the average and deviation per value. Drop a <b>flag &amp; green</b> on the range, shape the green right on the map and aim with a tap. And on launch monitors that measure impact, the new <b>Impact</b> tab maps your strike pattern on the face.</p>
-                </div>
-                <img class="shot" src="images/range_grouped.png" alt="Range mode shot data" width="2472" height="2508" loading="lazy" decoding="async"/>
-            </article>
+                    <figure class="hero-figure hl-media">
+                        <img class="hero-photo portrait" src="images/features-tracer-detail.jpg" alt="Swing video with the ball tracer: a golfer in the finish on a driving-range mat, the computed flight of the shot drawn as an orange line into the sky" width="780" height="916" loading="lazy" decoding="async"/>
+                        <figcaption>8 iron at the range — the line is the computed flight</figcaption>
+                    </figure>
+                </article>
 
-            <article class="card span-3 feature-lg reveal" style="--delay:80ms">
-                <div>
-                    <div class="icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                <!-- (b) Build your own drills -->
+                <article class="card span-6 feature-hero hl hl--flip reveal">
+                    <div class="hl-copy">
+                        <p class="hl-kicker">Drill builder <span class="tag">New in 8.4</span></p>
+                        <h3>Build your own drills — <span class="grad-text">your targets, your rules</span></h3>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                <span><b>A template or a blank page</b>Five ready-made Skill Games — fairways in a row, draw and fade, approach, block practice, beat the clock — are waiting in the Drills tab to play, copy or tweak.</span>
+                            </li>
+                            <li>
+                                <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                <span><b>Zones you draw on your own shots</b>Drag target, bonus and penalty zones over your last 50 shots and watch the hit rate change. A dry run shows how often your recent shots would have scored; one tap fits the zone to about a 50&nbsp;% hit rate.</span>
+                            </li>
+                            <li>
+                                <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                <span><b>Rules and steps</b>Add rules on ball and club data — carry, start line, draw or fade — and chain steps like draw, then fade.</span>
+                            </li>
+                            <li>
+                                <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                <span><b>Six ways to win</b>Longest streak, success rate, hits in a set number of shots, points, most hits before the clock runs out, or fewest shots to a set number of hits. A miss starts you over, costs a joker or just counts against your score — or, in sudden death, ends the run.</span>
+                            </li>
+                            <li>
+                                <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                <span><b>Every ball scored, every drill shareable</b>The app scores each shot the moment you hit, just like the built-in drills: a status card shows each rule and why a miss missed, one tap discards a mishit, a voice calls the next shot. Your best run earns a BEST badge — and a drill travels to a friend as a file.</span>
+                            </li>
+                            <li>
+                                <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                                <span><b>Precision Drills, too</b>Combine, spin, target-circle, fewest-strokes and ladder drills — with your own distances, rounds, unit and scoring.</span>
+                            </li>
+                        </ul>
+                        <a class="more" href="#drills">See all drills</a>
                     </div>
-                    <h3>Perfect your driver</h3>
-                    <p>Run TM Driver tests to benchmark your speed and accuracy, and make every improvement measurable over time.</p>
-                </div>
-                <img class="shot" src="images/driver.png" alt="Driver testing" width="988" height="1988" loading="lazy" decoding="async"/>
-            </article>
+                    <div class="phone-pair hl-media">
+                        <figure>
+                            <img src="images/features-drills-list.jpg" alt="The Drills tab on iPhone: five Skill Games – Max in Row Tee, Draw &amp; Fade Tee, Approach the Green, Block Practice, Beat the Clock – above the Precision Drills" width="780" height="1694" loading="lazy" decoding="async"/>
+                            <figcaption>Skill Games and Precision Drills, one tab</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/features-skill-game.jpg" alt="A Skill Game in play: the Draw &amp; Fade Tee drill at shot 6 of 30, six draws in a row, the computed flight into the green target zone, with the Drill, Data and Table tabs below" width="780" height="1694" loading="lazy" decoding="async"/>
+                            <figcaption>Draw &amp; Fade in play: six in a row</figcaption>
+                        </figure>
+                    </div>
+                </article>
 
-            <article class="card span-3 feature-lg reveal">
-                <div>
-                    <div class="icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"/></svg>
+                <!-- (c) Tile Challenges (takes over the former "Tile Challenges" and "Corridors" cards) -->
+                <article class="card span-3 hl hl--stack reveal">
+                    <p class="hl-kicker">Tile Challenges <span class="tag">New in 8.4</span></p>
+                    <h3>Any tile can be <span class="grad-text">a game</span></h3>
+                    <p>Give a tile a lower and upper limit. A shot outside turns the limit red and sounds different, so you know without looking; an orange badge counts your shots in a row inside, a green one your best run of the session. Then pick a game:</p>
+                    <ul class="hl-modes">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-5M10 20v-9M15 20V7M20 20V3"/></svg>
+                            <b>Streak</b><span>How many in a row?</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+                            <b>X Shots</b><span>Your target of hits, in as few shots as you can</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>
+                            <b>Record</b><span>Chase your highest — or lowest — value</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9.5 2h5M12 2v3"/></svg>
+                            <b>Timed</b><span>Beat the clock</span>
+                        </li>
+                    </ul>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                            <span><b>Combine tiles</b>A shot only counts when all of them are inside — or as many as you choose.</span>
+                        </li>
+                        <li>
+                            <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                            <span><b>Records that last</b>Personal records carry over from session to session; a ★ on the green badge marks a new one.</span>
+                        </li>
+                    </ul>
+                    <p class="hl-fine">Corridors on side angle, side and total spin, spin axis and club-data tiles need Pro.</p>
+                    <div class="phone-pair hl-media">
+                        <figure>
+                            <img src="images/features-tiles-data.jpg" alt="The Data tab on iPhone with corridors on three tiles: Ball Speed 114 to 118 with an orange badge for 3 in a row and a green badge for a best run of 4 with a star, Launch Angle 16 to 17 with 3 and 3, and Backspin 6700 to 7100 with its lower limit turned red after a shot below it" width="780" height="1694" loading="lazy" decoding="async"/>
+                            <figcaption>Corridors and badges on the tiles</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/features-tiles-games.jpg" alt="The big Ball Speed tile with the four games Streak, X Shots, Record and Timed; X Shots is selected with a target of 10 hits and the orange badge reading round 7 of 10 after 9 shots" width="780" height="1694" loading="lazy" decoding="async"/>
+                            <figcaption>Pick the game: X Shots, 7 of 10</figcaption>
+                        </figure>
                     </div>
-                    <h3>Wedge &amp; approach game</h3>
-                    <p>Combine tests, spin drills and target-circle pitching to random or fixed distances — with shots-gained against the tour average.</p>
-                </div>
-                <img class="shot" src="images/drill_grouped.png" alt="Wedge drills" width="2100" height="2300" loading="lazy" decoding="async"/>
-            </article>
+                    <a class="more" href="#challenges">How the games work</a>
+                </article>
 
-            <article class="card span-3 feature-lg reveal" style="--delay:80ms">
-                <div>
-                    <div class="icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M5 4H3v2a3 3 0 0 0 3 3M19 4h2v2a3 3 0 0 1-3 3"/></svg>
+                <!-- (d) 3D Range (takes over the former "Your shot in 3D" card) -->
+                <article class="card span-3 hl hl--stack reveal" style="--delay:80ms">
+                    <p class="hl-kicker">3D Range</p>
+                    <h3>Watch every shot <span class="grad-text">fly in 3D</span></h3>
+                    <p>Each shot replays in a 3D driving range with a live tracer, following the flight the app computes from your launch monitor's data.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                            <span><b>Four worlds</b>Mountains or ocean, each in a comic or a realistic look.</span>
+                        </li>
+                        <li>
+                            <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                            <span><b>Your camera</b>Watch from behind, down the line, overhead or with a free camera — a split range shows two angles at once.</span>
+                        </li>
+                        <li>
+                            <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                            <span><b>Set up like your bay</b>Adjust the field of view, distance lines and signs, and the shot-number tags.</span>
+                        </li>
+                    </ul>
+                    <div class="phone-pair hl-media">
+                        <figure>
+                            <img src="images/features-range3d-beach.jpg" alt="3D Range, ocean scene in the comic look with the Follow camera: the computed flight of the tenth shot as a thin line dropping toward the flag, the landing spots of the session marked with shot numbers" width="780" height="1694" loading="lazy" decoding="async"/>
+                            <figcaption>Ocean · Follow</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/range3d-follow.jpg" alt="3D Range, mountain scene with the Follow camera: the ball in mid-flight with its tracer, the shot's data tiles in a column beside it" width="1320" height="2868" loading="lazy" decoding="async"/>
+                            <figcaption>Mountains · mid-flight</figcaption>
+                        </figure>
                     </div>
-                    <h3>Online competitions</h3>
-                    <p>Compete for the longest drive or the best 10-drive TM score — with friends or globally — and climb the Apple Game Center leaderboards.</p>
-                </div>
-                <img class="shot" src="images/competitions.png" alt="Competitions" width="2000" height="2200" loading="lazy" decoding="async"/>
-            </article>
+                    <a class="more" href="#range3d">Explore the 3D Range</a>
+                </article>
+
+                <!-- (e) Works with your monitor -->
+                <article class="card span-6 feature-hero hl hl--monitors reveal">
+                    <div class="hl-copy">
+                        <p class="hl-kicker">Works with your monitor</p>
+                        <h3>Your launch monitor, <span class="grad-text">connected your way</span></h3>
+                        <p>Over the unit's own Wi-Fi, your local network or Bluetooth — whichever your monitor offers. Its shots land in the same range, drills and challenges, with the tiles your monitor really delivers.</p>
+                        <a class="more" href="#devices">Every monitor in detail</a>
+                    </div>
+                    <ul class="monitor-wall hl-media" aria-label="Supported launch monitors and how they connect">
+                        <li><b>Foresight GCQuad / QuadMAX</b><span>Hotspot or Bluetooth</span><small>GCHawk: experimental</small></li>
+                        <li><b>Foresight GC3 / GC3S</b><span>Hotspot, local network or Bluetooth</span><small>Falcon: experimental</small></li>
+                        <li><b>Bushnell Launch Pro</b><span>Connects just like the GC3</span></li>
+                        <li><b>TrackMan 4</b><span>Directly — its own Wi-Fi or your network</span></li>
+                        <li><b>Full Swing KIT <span class="tag">New</span></b><span>Bluetooth</span></li>
+                        <li><b>Garmin Approach R10</b><span>Through E6 Connect in the Garmin Golf app</span></li>
+                        <li><b>OpenFlight</b><span>Open-source DIY radar · local network</span></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+
+        <!-- ---------- Index of the detail groups ---------- -->
+        <div class="fdetail-head reveal">
+            <p class="fdetail-kicker">And there's more — every feature, group by group</p>
+            <nav class="feature-jump" aria-label="Feature groups">
+                <a class="chip" href="#features-range">Range</a>
+                <a class="chip" href="#features-drills">Drills &amp; competitions</a>
+                <a class="chip" href="#features-video">Swing video</a>
+                <a class="chip" href="#features-connect">Connection</a>
+                <a class="chip" href="#features-more">iPad &amp; more</a>
+            </nav>
+        </div>
+
+        <!-- ---------- 1 · Range ---------- -->
+        <div class="fgroup" id="features-range">
+            <div class="fgroup-head reveal">
+                <h3>Read every shot at a glance</h3>
+                <p>Every number the moment you hit, beside the flight the app computes from your launch monitor's data — laid out the way you like.</p>
+            </div>
+            <div class="bento">
+                <article class="card span-6 feature-hero reveal">
+                    <div>
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M19 9l-5 5-4-4-3 3"/></svg>
+                        </div>
+                        <h4>Range mode</h4>
+                        <p>Ball, spin and club data appear as you hit, next to the flight the app computes from them. Flip between a top view with a dispersion ellipse per club, a height profile, diagrams of club path, face and attack angle, the 3D range, your tiles and the shot Table — or split the screen in two; the app remembers your layout. On a GCQuad or QuadMAX with club data, the Impact tab maps where each shot struck the face.</p>
+                    </div>
+                    <div class="phone-pair">
+                        <figure>
+                            <img src="images/features-range-table.jpg" alt="The range's Table tab: nine 7-iron shots with ball speed, launch and side angle, average and standard deviation on top, and the export button" width="780" height="1694" loading="lazy" decoding="async"/>
+                            <figcaption>Table tab: every shot, average and spread per club</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/features-ipad-split.jpg" alt="Split range on iPad: the Offline dispersion view above, the Data tiles below" width="900" height="1200" loading="lazy" decoding="async"/>
+                            <figcaption>Split range on iPad: Offline above, Data below</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="card span-2 reveal">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                    </div>
+                    <h4>Your tiles, your layout</h4>
+                    <p>Long-press to reorder or hide tiles, pinch for one to three columns, and double-tap one to read it big from the mat. Every tile shows its session average and spread. And each launch monitor shows only the numbers it really delivers — no empty face-angle tiles on a unit that can't see the face.</p>
+                </article>
+                <article class="card span-2 reveal" style="--delay:80ms">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14.5h18M9 4v16"/></svg>
+                    </div>
+                    <h4>Every shot in one table <span class="tag">New</span></h4>
+                    <p>The Table tab lists every shot of the session with average and standard deviation per club. Tap a row to see that shot, untick a mishit and it drops out of the stats, tap the club cell to fix a wrong club, double-tap for fullscreen — and export to CSV or Excel.</p>
+                </article>
+                <article class="card span-2 reveal" style="--delay:160ms">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V4"/><path d="M2.5 6.5L5 4l2.5 2.5"/><path d="M5 20L18 9"/><path d="M13.5 9H18v4.5"/><path d="M5 20h15"/><path d="M17.5 17.5L20 20l-2.5 2.5"/></svg>
+                    </div>
+                    <h4>Carry, three ways <span class="tag">New</span></h4>
+                    <p>No more guessing which carry a tile means: Carry Distance runs along the target line, Carry Offline to the side, Carry Diagonal straight to the ball — the length a longest-drive contest measures. Total comes the same three ways. The Diagonal tiles start hidden — add them with +.</p>
+                </article>
+
+                <article class="card span-3 reveal">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19V3l8 3.5L9 10"/><ellipse cx="9" cy="19" rx="6.5" ry="2"/></svg>
+                    </div>
+                    <h4>Flag, green — and a score for every shot <span class="tag">New</span></h4>
+                    <p>Put a flag and green on the range: drag to set the distance, pinch the green into a wide or deep ellipse, like the greens you play to. With a flag out, every shot gets a TM Score from 0 to 100 and strokes gained against that distance.</p>
+                </article>
+                <article class="card span-3 reveal" style="--delay:80ms">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+                    </div>
+                    <h4>Your conditions, your units</h4>
+                    <p>Set temperature, humidity, elevation, tee-to-green height difference, wind and turf firmness, and the computed flight follows. Pick yards or meters, mph, km/h or m/s, °F or °C, and L/R or signed numbers for left and right. Closer to your Foresight display? Use Pro's Trajectory Model+ with the 'Foresight App' environment.</p>
+                </article>
+            </div>
+        </div>
+
+        <!-- ---------- 2 · Drills & competitions ---------- -->
+        <div class="fgroup" id="features-drills">
+            <div class="fgroup-head reveal">
+                <h3>Prove your progress</h3>
+                <p>Tests that end in a number, so getting better is something you can show — and leaderboards to see where you stand. Every drill type is explained under Drills below.</p>
+            </div>
+            <div class="bento">
+                <article class="card span-2 reveal">
+                    <img class="thumb" src="images/driver.png" alt="TM Driver test: shot 4 of 6 with the landing spots on the grid, total distance, TM Score 92 and the running average" width="988" height="1988" loading="lazy" decoding="async"/>
+                    <h4>Perfect your driver</h4>
+                    <p>Run the TM Driver test: six drives, each scored from 0 to 100 on length and straightness, with your average and consistency at a glance. Repeat it in a month and see in one number whether your driver got better.</p>
+                </article>
+                <article class="card span-2 reveal" style="--delay:80ms">
+                    <img class="thumb" src="images/drill_grouped.png" alt="Target-circle pitching drill: four shots around the target with the score radii, next to the shot table" width="2100" height="2300" loading="lazy" decoding="async"/>
+                    <h4>Wedge &amp; approach game</h4>
+                    <p>Play the Trackman Combine distance by distance, drop your worst shots and see strokes gained against the PGA Tour average. Sharpen your wedges with spin drills that reward stopping power and target-circle pitching to fixed or random distances, in yards or meters.</p>
+                </article>
+                <article class="card span-2 reveal" style="--delay:160ms">
+                    <img class="thumb" src="images/competitions.png" alt="The Compete tab with Longest Drive Carry, Best 10 Drives TM Score and Best ½ TM Combine, and the Game Center leaderboard for Longest Drive Carry" width="2000" height="2200" loading="lazy" decoding="async"/>
+                    <h4>Online competitions</h4>
+                    <p>Go for the longest drive, your best ten drives by TM Score or half a Combine, and compare with friends or golfers worldwide on Apple Game Center. Every shot flies under the same standard conditions — fair for all, and usually a bit shorter than your monitor shows.</p>
+                </article>
+
+                <article class="card span-3 reveal">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v18M16 3v18M8 7.5h8M8 12h8M8 16.5h8"/></svg>
+                    </div>
+                    <h4>Ladders and fewest strokes</h4>
+                    <p>Work through a distance ladder rung by rung with the retries you allow, or finish a set of targets in As Few Strokes As Possible, where you choose what a miss costs: retry, drop back or restart. Start from a predefined drill or set your own distances, rounds, unit and scoring.</p>
+                </article>
+                <article class="card span-3 reveal" style="--delay:80ms">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v5M15 4v5"/></svg>
+                    </div>
+                    <h4>Every drill, one familiar layout <span class="tag">New</span></h4>
+                    <p>Drills now use the Range's layout: a Drill tab with exactly the numbers you're judged by, your own Data tiles and the full shot Table — double-tap it for fullscreen. The info button explains how each drill scores and what every color in the graphic means.</p>
+                </article>
+            </div>
+        </div>
+
+        <!-- ---------- 3 · Swing video — only what highlight (a) doesn't already say (recording,
+             swing points, 240 fps, tracer, practice-swing tags, heart and music live there) ---------- -->
+        <div class="fgroup" id="features-video">
+            <div class="fgroup-head reveal">
+                <h3>Your swing, in the player</h3>
+                <p>What you can do with a clip once it's recorded. More under Swing Video below.</p>
+            </div>
+            <div class="bento">
+                <article class="card span-3 reveal">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 3v18M16.5 3v18M3 12h18M3 7.5h4.5M3 16.5h4.5M16.5 7.5H21M16.5 16.5H21"/></svg>
+                    </div>
+                    <h4>Every frame, your way</h4>
+                    <p>Play at ½, ¼ or ⅛ speed, pinch to zoom, loop, and trim playback to the swing. A swing point that's off? Drag it. Draw lines and circles over the frame — and if your range climbs, set the tracer's slope once and the app remembers it.</p>
+                </article>
+                <article class="card span-3 reveal" style="--delay:80ms">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h4>Keep it, share it, add a second angle <span class="tag">New</span></h4>
+                    <p>Hide practice swings or clear them in one go; favorites are never deleted automatically. Share a clip in full or cut to the swing, and import a second angle from Photos or Files.</p>
+                </article>
+            </div>
+        </div>
+
+        <!-- ---------- 4 · Connection ---------- -->
+        <div class="fgroup" id="features-connect">
+            <div class="fgroup-head reveal">
+                <h3>Connect without the guesswork <span class="tag">New in 8.4</span></h3>
+                <p>Setting up is guided, a GCQuad or GC3 now connects over Bluetooth too, and when something goes wrong the app tells you why. Every monitor in detail under Devices below.</p>
+            </div>
+            <div class="bento">
+                <article class="card span-2 reveal">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    </div>
+                    <h4>Guided connection</h4>
+                    <p>Pick your monitor and the app walks you through the steps, joining the unit's Wi-Fi for you where there is one. Next time it's already selected — just tap Continue. While connected, you see battery, device temperature and whether your Foresight unit sends full ball-and-club data or ball only.</p>
+                </article>
+                <article class="card span-2 reveal" style="--delay:80ms">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
+                    </div>
+                    <h4>GCQuad and GC3 over Bluetooth</h4>
+                    <p>Connect a Foresight GCQuad or GC3 over Bluetooth instead of its Wi-Fi hotspot — your phone stays on your normal network and keeps its internet while you practice. Several units in the room? The app lists them by serial number and remembers yours.</p>
+                </article>
+                <article class="card span-2 reveal" style="--delay:160ms">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                    </div>
+                    <h4>When it won't connect, it tells you why</h4>
+                    <p>Wrong Wi-Fi, no Wi-Fi, Local Network blocked, wrong monitor model — the app names the cause and the fix, and a shareable connection log helps support if it ever gets stuck. A Foresight unit's expiring offline license is flagged days before the monitor locks itself.</p>
+                </article>
+
+                <article class="card span-3 reveal">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    </div>
+                    <h4>Know when the monitor is ready</h4>
+                    <p>A big orange notice tells you when a Foresight monitor is waiting — several balls in view, or the ball outside the hitting zone — and disappears the moment it's ready. If the link drops, the app notices within seconds and reconnects on its own when it can.</p>
+                </article>
+                <article class="card span-3 reveal" style="--delay:80ms">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18"/><path d="M6.5 8h3M6.5 12h3M14.5 8h3M14.5 12h3"/></svg>
+                    </div>
+                    <h4>Your monitor's own numbers, side by side</h4>
+                    <p>TrackMan 4 and Full Swing KIT show their own carry, total and height as extra tiles next to the app's model, OpenFlight its own carry. On a TrackMan 4 you also get spin loft, swing plane, D-plane tilt, low point and curve as tiles.</p>
+                </article>
+            </div>
+        </div>
+
+        <!-- ---------- 5 · iPad & more ---------- -->
+        <div class="fgroup" id="features-more">
+            <div class="fgroup-head reveal">
+                <h3>Take it anywhere</h3>
+                <p>On iPad, on your Home Screen, on your next iPhone — plus a few extras.</p>
+            </div>
+            <div class="bento">
+                <article class="card span-6 feature-hero reveal">
+                    <div>
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M18.5 12h.01"/></svg>
+                        </div>
+                        <h4>Great on iPad</h4>
+                        <p>Run TrajectoryX in Split View or any window size — every screen adapts. On a large iPad in landscape the 3D range fills the screen and each graphic becomes a floating panel to drag, dock or close, drills show their score sheets side by side, and a keyboard's arrow keys move flag and green.</p>
+                    </div>
+                    <figure class="hero-figure">
+                        <img class="hero-photo" src="images/features-ipad-panels.jpg" alt="iPad in landscape: the 3D range fills the screen while the Data Points and Offline graphics float as panels over it" width="1400" height="1050" loading="lazy" decoding="async"/>
+                        <figcaption>Floating panels over the 3D range</figcaption>
+                    </figure>
+                </article>
+
+                <article class="card span-3 reveal">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h4>Your sessions, kept and portable</h4>
+                    <p>Every session stays on your device — search, rename, filter for sessions with videos or launch-monitor shots, and reopen any of them. Export one or several, videos included, and import them on another iPhone or iPad — or send the shot table as CSV or Excel.</p>
+                    <a class="more" href="#sessions">Export &amp; import</a>
+                </article>
+                <article class="card span-3 reveal" style="--delay:80ms">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M18.5 15.5l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></svg>
+                    </div>
+                    <h4>An AI Coach, if you want one</h4>
+                    <p>Optional, and off until you add your own Claude, ChatGPT or Gemini key: a one-tap session review with strengths, fixes and a drill to try, or a short tip after every shot. Only your practice numbers go to the provider you pick; not available in mainland China.</p>
+                    <a class="more" href="#ai">Meet the AI Coach</a>
+                </article>
+
+                <article class="card span-6 strip reveal">
+                    <h4>Also in the app</h4>
+                    <ul>
+                        <li>A 'Last Session' widget for Home and Lock Screen: shots, longest carry, top club — the medium size adds your newest swing video</li>
+                        <li>A 'Record Swing' control for the Lock Screen, Control Center or Action button (iOS&nbsp;18+)</li>
+                        <li>Sound and haptics after each shot — one sound inside your corridors, another outside</li>
+                        <li>A club bag with names and colors; fix a wrong club right from the video</li>
+                        <li>Browse a session shot by shot; zoom the flight 2×, or 20× with Pro</li>
+                        <li>Video storage under your control: set how much space old videos may take — favorites stay</li>
+                        <li>Light, dark or system look; keyboard shortcuts and a mat center line on iPad</li>
+                    </ul>
+                </article>
+            </div>
         </div>
     </div>
 </section>
@@ -290,15 +674,15 @@
         </div>
         <div class="gallery">
             <figure class="phone reveal">
-                <img src="images/shot-dispersion.png" alt="The range's Offline view: nine shots with their dispersion ellipse, target circle and the last shot's tracer" width="1320" height="2868" loading="lazy" decoding="async"/>
+                <img src="images/features-range-offline.jpg" alt="The range's Offline view: nine shots around the green target circle with their dispersion ellipse, and the computed flight line of the last shot" width="780" height="1694" loading="lazy" decoding="async"/>
                 <figcaption>Dispersion &amp; target at a glance</figcaption>
             </figure>
             <figure class="phone reveal" style="--delay:80ms">
-                <img src="images/shot-data.png?v=2" alt="The Data tab: every ball and club value as a tile, with average and deviation" width="1320" height="2868" loading="lazy" decoding="async"/>
+                <img src="images/features-range-data.jpg" alt="The Data tab: ball speed, launch and side angle, spin, carry, offline and total as tiles, each with its session average and spread" width="780" height="1694" loading="lazy" decoding="async"/>
                 <figcaption>Every value at a glance</figcaption>
             </figure>
             <figure class="phone reveal" style="--delay:160ms">
-                <img src="images/shot-connect.png?v=2" alt="The connect screen: pick your Foresight GCQuad or GC3, Bushnell Launch Pro, TrackMan 4, Full Swing KIT, Garmin R10 or OpenFlight launch monitor" width="1320" height="2868" loading="lazy" decoding="async"/>
+                <img src="images/features-connect.jpg" alt="The connect screen: pick your Foresight GCQuad / QuadMAX or GC3 — with the GC3S and Bushnell Launch Pro — TrackMan 4, Full Swing KIT, Garmin Approach R10 or OpenFlight launch monitor" width="780" height="1694" loading="lazy" decoding="async"/>
                 <figcaption>Connect Foresight, Bushnell, TrackMan &amp; more</figcaption>
             </figure>
         </div>
@@ -319,7 +703,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><circle cx="12" cy="11" r="3"/></svg>
                 </div>
                 <h3>Foresight Sports GCQuad / QuadMAX</h3>
-                <p>Native, encrypted connection. Full ball, club and spin data is read in real time and used to calculate and display the ball flight for every shot. While you're connected, the unit's battery and temperature are shown at a glance — for the whole Foresight family.</p>
+                <p>Native, encrypted connection. Full ball, club and spin data is read in real time and used to calculate and display the ball flight for every shot. While you're connected, the unit's battery and temperature are shown at a glance — for the whole Foresight family. <b>New: connect over Bluetooth</b> instead of the unit's Wi-Fi hotspot — your iPhone stays on your normal network and keeps its internet; with several units in the room, the app lists them by serial number and remembers yours.</p>
             </article>
             <article class="card reveal" style="--delay:80ms">
                 <div class="icon">
@@ -333,7 +717,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V9a2 2 0 0 1 2-2h5l2-3h5a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="13" cy="12" r="3.2"/></svg>
                 </div>
                 <h3>TrackMan 4</h3>
-                <p>Connect your TrackMan 4 directly over Wi-Fi — no simulator software in between. You get live shot data, an instant flight preview about a second after impact, swing videos straight from the TrackMan camera, an aim dialog with the device's own camera view, and a view-only mode for when someone else is running the unit.</p>
+                <p>Connect your TrackMan 4 directly over Wi-Fi — no simulator software in between. You get live shot data, an instant flight preview about a second after impact, swing videos straight from the TrackMan camera, an aim dialog with the device's own camera view, and a view-only mode for when someone else is running the unit. <b>New:</b> the TrackMan's own carry, total and height show up as extra tiles next to the app's ball flight model.</p>
             </article>
             <article class="card reveal" style="--delay:240ms">
                 <div class="icon">
@@ -385,7 +769,7 @@
                 </li>
                 <li>
                     <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                    <span><b>Ball tracer in your video <span class="tag">New</span></b>Watch the ball leave the frame and keep going: TrajectoryX draws the flight into your swing video like a TV broadcast — the <b>real curve your launch monitor measured</b>, traced over your own shot.</span>
+                    <span><b>Ball tracer in your video <span class="tag">New</span></b>Watch the ball leave the frame and keep going: TrajectoryX draws the flight into your swing video like a TV broadcast — the <b>flight the app computes from your launch monitor's data</b>, traced over your own shot.</span>
                 </li>
                 <li>
                     <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
@@ -393,15 +777,19 @@
                 </li>
                 <li>
                     <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                    <span><b>Favorites in one place <span class="tag">New</span></b>Tap the heart on any swing video to keep it. The heart in your session list opens all your favorites from every session — and favorites are never deleted automatically.</span>
+                </li>
+                <li>
+                    <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
                     <span><b>Hands-free, no launch monitor needed</b>It records on its own the moment you hit — film your swing at the range, the net or in your garden.</span>
                 </li>
                 <li>
                     <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                    <span><b>Start from the Lock Screen</b>Put the "Record Swing" control on your Lock Screen, in Control Center or on the Action button (iOS&nbsp;18+) — one tap and the swing camera is rolling, no unlocking and searching for the app.</span>
+                    <span><b>Start from the Lock Screen</b>Put the "Record Swing" control on your Lock Screen, in Control Center or on the Action button (iOS&nbsp;18+) — one tap and the swing camera is rolling, without hunting for the app.</span>
                 </li>
                 <li>
                     <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                    <span><b>Your whole session, one player</b>Step back and forth through every video of a session — or put two swings side by side and compare them frame for frame.</span>
+                    <span><b>Your whole session, one player</b>Step back and forth through every video of a session — or split the screen and watch a second angle of the same shot next to the first.</span>
                 </li>
             </ul>
             <div class="roadmap">
@@ -411,46 +799,41 @@
             </div>
         </div>
         <div class="visual reveal" style="--delay:100ms">
-            <figure class="phone">
-                <img src="images/swing-preview.jpg" alt="TrajectoryX swing video: a golfer at the top of the backswing with the swing points detected on the timeline" width="598" height="1300" loading="lazy" decoding="async"/>
-                <figcaption>Auto-detected: Start · Top · Impact · End</figcaption>
-            </figure>
+            <div style="display:flex; gap:1rem; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
+                <figure class="phone" style="flex:1 1 200px; max-width:260px;">
+                    <img src="images/swing-preview.jpg" alt="TrajectoryX swing video: a golfer at the top of the backswing with the swing points detected on the timeline" width="598" height="1300" loading="lazy" decoding="async"/>
+                    <figcaption>Auto-detected: Start · Top · Impact · End</figcaption>
+                </figure>
+                <figure class="phone" style="flex:1 1 200px; max-width:260px;">
+                    <img src="images/swing-tracer.jpg" alt="TrajectoryX swing video with the ball tracer: the computed ball flight drawn over an 8 iron swing at the driving range, with the swing points on the timeline below" width="780" height="1696" loading="lazy" decoding="async"/>
+                    <figcaption>Ball tracer in your own video</figcaption>
+                </figure>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- ===================== 3D RANGE =====================
-     v8.1 feature. HOLD FOR DEPLOY: do NOT push this section live until the 3D range actually
-     ships in v8.1 AND has been device-verified (same discipline as GC3 — no leaking a feature
-     users can't open yet). The featureFlagEnableRange3D flag is already on for v8.1. -->
-<style>
-    #range3d .range3d-ph{max-width:340px;margin-inline:auto}
-    #range3d .range3d-ph-inner{aspect-ratio:1320/2868;border-radius:40px;border:2px dashed rgba(41,151,255,0.55);
-        background:radial-gradient(120% 60% at 50% 0%,rgba(41,151,255,0.16),transparent 60%),linear-gradient(160deg,#0a1220,#0e1c30 55%,#10243d);
-        display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.7rem;text-align:center;padding:1.4rem}
-    #range3d .range3d-ph-badge{font-weight:800;letter-spacing:0.14em;text-transform:uppercase;font-size:0.78rem;color:#2997ff}
-    #range3d .range3d-ph-title{font-weight:700;font-size:1.05rem;color:#e7eefc}
-    #range3d .range3d-ph-note{font-size:0.85rem;color:#8398b4;line-height:1.5}
-    #range3d .range3d-ph-note code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.8rem;color:#a9c2e6}
-</style>
+     Live since v8.1 (featureFlagEnableRange3D on). Ball flight wording: always the flight the app
+     computes from the launch monitor's data, never a "measured" or "real" trajectory. -->
 <section id="range3d">
     <div class="container split">
         <div class="copy reveal">
             <span class="soon">New</span>
             <h2>Watch your shot in <span class="grad-text">glorious 3D</span></h2>
-            <p>Meet the <b>3D Range</b>. Every shot is replayed in a full 3D driving range — built from the <b>real trajectory</b> your launch monitor measured — so you can watch the ball climb, turn and land, tracer and all. Mountains or ocean, and now in a <b>realistic look</b> with dense forests, rugged peaks, beach rocks and palms.</p>
+            <p>Meet the <b>3D Range</b>. Every shot is replayed in a full 3D driving range — built from the <b>flight the app computes from your launch monitor's data</b> — so you can watch the ball climb, turn and land, tracer and all. Mountains or ocean, in a comic or a <b>realistic look</b> with dense forests, rugged peaks, beach rocks and palms.</p>
             <ul class="feature-list">
                 <li>
                     <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                    <span><b>Your real ball flight</b>The 3D range replays the exact shot from your launch monitor — carry, curve and apex — with a bright ball tracer and a shadow path on the turf.</span>
+                    <span><b>Your ball flight, in 3D</b>For every shot, the 3D range replays the flight the app computes from your launch monitor's data — carry, curve and apex — with a bright ball tracer and a shadow path on the turf.</span>
                 </li>
                 <li>
                     <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                    <span><b>Follow the ball your way</b>Chase it from behind, line it up down the target line, take the whole carry in from overhead — or switch to the new <b>free camera</b> and explore the range from any angle you like.</span>
+                    <span><b>Follow the ball your way</b>Chase it from behind, line it up down the target line, take the whole carry in from overhead — or switch to the <b>free camera</b> and explore the range from any angle you like.</span>
                 </li>
                 <li>
                     <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                    <span><b>Four worlds to play in</b>Take your pick in Settings: a mountain range ringed by forest or an endless ocean with a palm-lined beach — each in a light comic style or the new realistic look, under skies you can switch too.</span>
+                    <span><b>Four worlds to play in</b>Take your pick in Settings: a mountain range ringed by forest or an endless ocean with a palm-lined beach — each in a light comic style or a realistic look, under skies you can switch too.</span>
                 </li>
             </ul>
         </div>
@@ -461,7 +844,7 @@
                     <figcaption>Mountain &middot; Down the Line</figcaption>
                 </figure>
                 <figure class="phone" style="flex:1 1 200px; max-width:260px;">
-                    <img src="images/range3d-ocean.jpg" alt="TrajectoryX 3D Range — the new ocean scene (Overhead camera): the same shot over a palm-lined beach and open sea" width="1206" height="2622" loading="lazy" decoding="async"/>
+                    <img src="images/range3d-ocean.jpg" alt="TrajectoryX 3D Range — the ocean scene (Overhead camera): the same shot over a palm-lined beach and open sea" width="1206" height="2622" loading="lazy" decoding="async"/>
                     <figcaption>Ocean &middot; Overhead</figcaption>
                 </figure>
             </div>
@@ -507,9 +890,9 @@
 <section id="ai">
     <div class="container">
         <div class="section-head reveal">
-            <span class="soon">Now available</span>
+            <span class="soon">Optional</span>
             <h2 style="margin-top:1rem">Meet your <span class="grad-text">AI Coach</span></h2>
-            <p>Instant, data-driven coaching on your practice. The AI Coach reads your shot data and turns it into clear, actionable feedback — right inside TrajectoryX.</p>
+            <p>An optional extra, off until you add your own API key: the AI Coach reads your shot data and turns it into clear, actionable feedback — right inside TrajectoryX. Not available in mainland China.</p>
         </div>
         <div class="bento">
             <article class="card span-2 reveal">
@@ -535,8 +918,8 @@
             </article>
         </div>
         <p class="note reveal" style="text-align:center; max-width:760px; margin-inline:auto;">
-            The optional AI analysis sends your play data to the AI provider you chose (Claude / ChatGPT / Gemini);
-            your API key is stored locally on your device. See our <a href="privacypolicy/">Privacy Policy</a> for details.
+            AI analysis is off by default; nothing leaves your device until you turn it on. When you do, it sends
+            your play data to the AI provider you chose (Claude / ChatGPT / Gemini); your API key is stored locally on your device. See our <a href="privacypolicy/">Privacy Policy</a> for details.
         </p>
     </div>
 </section>
@@ -590,7 +973,7 @@
         <div class="section-head reveal">
             <span class="eyebrow">Drills</span>
             <h2>Train the <span class="grad-text">right way</span></h2>
-            <p>Pick a predefined drill — or build your own <b>Skill Games</b> with the new drill builder. Four drill types power them all, and every drill now has the same tabs as the range, including its own Data tab:</p>
+            <p>Pick a predefined drill — or build your own <b>Skill Games</b> with the new drill builder. Five Precision Drill types, plus the games you make yourself; every drill now has the same tabs as the range, including its own Data tab:</p>
         </div>
         <div class="drills">
             <details class="drill reveal" open>
@@ -620,9 +1003,16 @@
                 </div>
             </details>
             <details class="drill reveal">
+                <summary>Ladder <span class="plus">+</span></summary>
+                <div class="body">
+                    <p>Climb a ladder of distances, up or down, from a start to an end distance. Land a valid shot on each rung before you move on to the next — within the retries you allow, per rung or for the whole ladder.</p>
+                </div>
+            </details>
+            <details class="drill reveal">
                 <summary>Build your own — Skill Games &amp; Precision Drills <span class="plus">+</span></summary>
                 <div class="body">
-                    <p>New in 8.4: the drill builder. Start from a template or from scratch, pick one of the four types, set your distances, targets and scoring, give it a name — done. Your own drills line up right next to the predefined ones, with the same shot views, Data tab and score history.</p>
+                    <p>New in 8.4: the drill builder. Start from one of five Skill Game templates or from scratch: draw target, bonus and penalty zones over your own shots, add rules on ball and club data, choose one of six ways to win, give it a name — done. Your Skill Games sit above the Precision Drills in the Drills tab, with the same Drill, Data and Table tabs, a BEST badge and a records list per game.</p>
+                    <p>Prefer a Precision Drill? Create one of the five types above with your own distances, rounds, unit and scoring.</p>
                 </div>
             </details>
         </div>
@@ -666,7 +1056,7 @@
         <div class="section-head reveal">
             <span class="eyebrow">Pricing</span>
             <h2>Free to use, <span class="grad-text">Pro when you want it</span></h2>
-            <p>All core features are free. Two Pro extras — the Foresight ball flight model and unlimited swing video — are optional, and you can try both every day at no cost.</p>
+            <p>All core features are free. The Pro extras — the Foresight ball flight model, unlimited swing video, 20× range zoom and corridors on the premium data tiles — are optional, and you can try the ball flight model and swing video every day at no cost.</p>
         </div>
         <div class="device-grid">
             <article class="card plan-free reveal">
@@ -675,10 +1065,13 @@
                 <ul class="plan-list">
                     <li>Connect your launch monitor &amp; see live ball flight</li>
                     <li>Combine tests, driver, chip &amp; pitch drills</li>
+                    <li>Skill Games you build yourself, with your own zones and rules</li>
+                    <li>Corridors and tile challenges on ball speed, launch angle, backspin, carry, total and the other flight tiles</li>
                     <li>Online competitions &amp; leaderboards</li>
-                    <li>AI Coach (with your own API key)</li>
+                    <li>Swing video with swing points and the ball tracer — 5 recordings a day, imported clips unlimited</li>
+                    <li>Optional AI Coach (with your own API key)</li>
                     <li>A free, high-quality ball flight model designed in-house</li>
-                    <li>Try Pro daily: 5 shots with the Foresight model &amp; 5 swing videos per day</li>
+                    <li>Try Pro daily: 10 shots a day with the Foresight model</li>
                 </ul>
             </article>
             <article class="card plan-premium reveal" style="--delay:80ms">
@@ -688,8 +1081,9 @@
                     <li>The Foresight Sports ball flight model, without the daily limit</li>
                     <li>Unlimited swing video</li>
                     <li>20× range zoom for a close-up of your ball flight</li>
+                    <li>Corridors and tile challenges on side angle, side spin, total spin, spin axis and the club-data tiles</li>
                 </ul>
-                <p class="plan-note">Everything else stays free — Pro is entirely optional. For the ball flight model the free in-house alternative is just as accurate for everyday practice; swing video beyond the 3 daily recordings is Pro only.</p>
+                <p class="plan-note">Everything else stays free — Pro is entirely optional. For the ball flight model the free in-house alternative is just as accurate for everyday practice; swing video beyond the 5 daily recordings is Pro only.</p>
             </article>
         </div>
     </div>
@@ -706,13 +1100,13 @@
             <details class="drill reveal" open>
                 <summary>How much does TrajectoryX cost? <span class="plus">+</span></summary>
                 <div class="body">
-                    <p>All core features are free, including a high-quality ball flight model designed in-house. Two extras are Pro: the Foresight Sports ball flight model — where the free in-house model is a full everyday replacement — and swing video, which has no free equivalent beyond its daily allowance. You can try both every day for free (5 shots with the Foresight model, 5 swing videos) and unlock them fully with an optional subscription.</p>
+                    <p>All core features are free, including a high-quality ball flight model designed in-house, the Skill Games you build yourself and the ball tracer. Pro adds the Foresight Sports ball flight model — where the free in-house model is a full everyday replacement — unlimited swing video, which has no free equivalent beyond its daily allowance, 20× range zoom and corridors on the side-angle, side-spin, total-spin, spin-axis and club-data tiles. You can try the ball flight model and swing video every day for free (10 shots with the Foresight model, 5 swing videos) and unlock everything with an optional subscription.</p>
                 </div>
             </details>
             <details class="drill reveal">
                 <summary>Which launch monitors are supported? <span class="plus">+</span></summary>
                 <div class="body">
-                    <p>TrajectoryX works with the Foresight Sports GCQuad, QuadMAX, GC3 and GC3S, the Bushnell Launch Pro — which shares the GC3 connection — the TrackMan 4 and the Full Swing KIT, as well as the Garmin Approach R10 via the E6 Connect protocol and DIY units running OpenFlight. Support for the fixed-install Foresight GCHawk and Falcon is experimental for now. The app connects directly to your launch monitor — over Wi-Fi through the unit's own hotspot or your local network, or over Bluetooth for the Full Swing KIT and the GC3 family, which leaves your iPhone on its normal network.</p>
+                    <p>TrajectoryX works with the Foresight Sports GCQuad, QuadMAX, GC3 and GC3S, the Bushnell Launch Pro — which shares the GC3 connection — the TrackMan 4 and the Full Swing KIT, as well as the Garmin Approach R10 via the E6 Connect protocol and DIY units running OpenFlight. Support for the fixed-install Foresight GCHawk and Falcon is experimental for now. The app connects directly to your launch monitor — over Wi-Fi through the unit's own hotspot or your local network, or over Bluetooth for the Foresight GCQuad and GC3 family and the Full Swing KIT, which leaves your iPhone on its normal network.</p>
                 </div>
             </details>
             <details class="drill reveal">
@@ -736,7 +1130,7 @@
             <details class="drill reveal">
                 <summary>How does the AI Coach work? <span class="plus">+</span></summary>
                 <div class="body">
-                    <p>The AI Coach analyzes your session and gives you an overall grade, your strengths, what to improve and a targeted drill — picked from the app's own drills, so you can start it right away. You bring your own API key for Claude, ChatGPT or Gemini and choose the provider and model — your key stays on your device.</p>
+                    <p>The AI Coach analyzes your session and gives you an overall grade, your strengths, what to improve and a targeted drill — picked from the app's own drills, so you can start it right away. You bring your own API key for Claude, ChatGPT or Gemini and choose the provider and model — your key stays on your device. The AI Coach is optional and stays off until you add a key; it isn't available in mainland China.</p>
                 </div>
             </details>
             <details class="drill reveal">
@@ -755,7 +1149,7 @@
             <details class="drill reveal">
                 <summary>What is the ball tracer in my swing video? <span class="plus">+</span></summary>
                 <div class="body">
-                    <p>The flight of the ball, drawn into your own video the way TV coverage traces a drive. It is not a guess from the footage: the curve is the <b>trajectory your launch monitor measured</b> for that exact shot, laid over the frame and timed to the moment of impact — so the ball leaves the picture and the line carries on to where it actually landed.</p>
+                    <p>The flight of the ball, drawn into your own video the way TV coverage traces a drive. It is not a guess from the footage: the curve is the <b>flight the app computes from your launch monitor's data</b> for that exact shot, laid over the frame and timed to the moment of impact — so the ball leaves the picture and the line carries on to where the app computes it to land.</p>
                     <p>Tap the tracer button in the video player. It appears whenever the clip belongs to a shot your launch monitor recorded.</p>
                 </div>
             </details>
@@ -780,7 +1174,7 @@
             <details class="drill reveal">
                 <summary>What is the 3D Range? <span class="plus">+</span></summary>
                 <div class="body">
-                    <p>The 3D Range is a new way to see your shot. Pick the "3D" view on the range and TrajectoryX replays your ball flight in a full 3D driving range, built from the real trajectory measured by your launch monitor. Follow the ball from behind, down the target line or from overhead — or take the free camera and look from anywhere — with a live tracer and a shadow path on the ground. Pinch to zoom, drag to look around and double-tap for full screen. In Settings you choose the scene (mountains or ocean, comic or realistic) and the sky.</p>
+                    <p>The 3D Range is a new way to see your shot. Pick the "3D" view on the range and TrajectoryX replays your ball flight in a full 3D driving range, built from the flight the app computes from your launch monitor's data. Follow the ball from behind, down the target line or from overhead — or take the free camera and look from anywhere — with a live tracer and a shadow path on the ground. Pinch to zoom, drag to look around and double-tap for full screen. In Settings you choose the scene (mountains or ocean, comic or realistic) and the sky.</p>
                 </div>
             </details>
         </div>

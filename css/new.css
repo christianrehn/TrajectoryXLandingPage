@@ -663,6 +663,106 @@ footer { border-top: 1px solid var(--border); padding-block: 3rem; }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); transition-delay: var(--delay, 0ms); }
 .reveal.in { opacity: 1; transform: none; }
 
+/* ---------- Features (2026-09-30): highlights, detail index, groups, hero cards, strip ----------
+   #features = section head → five HIGHLIGHT cards (#features-highlights) → an index line with jump
+   chips → five detail groups (div.fgroup, not sections — the scrollspy keeps its fixed list), each
+   with its own .bento. Highlight and group titles are h3, card titles h4 (styled like .card h3).
+   .feature-hero = full-width card: text left, phone pair / photo / monitor list right; one column
+   below 1040px, where the images are capped so they don't grow to the full card width. */
+
+/* Highlights: big showcase cards with a kicker, a strong headline and the site's check-mark list
+   (.feature-list, as in #swing / #range3d). .hl--flip puts the media left on wide screens only
+   (DOM order stays text first, so phones read text before images); .hl--stack = half-width card,
+   text on top, media below, "more" link pinned to the bottom so neighbouring cards line up. */
+#features .card.hl { padding: clamp(1.6rem, 1.1rem + 1.6vw, 2.6rem); }
+#features .card.feature-hero.hl { grid-template-columns: 1.05fr 0.95fr; gap: clamp(1.5rem, 1rem + 2.5vw, 3.2rem); }
+#features .card.hl .hl-kicker { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.7rem; margin: 0 0 0.85rem; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+#features .card.hl .hl-kicker .tag { margin-left: 0; letter-spacing: 0.04em; text-transform: none; }
+#features .card.hl h3 { font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.55rem); line-height: 1.05; letter-spacing: -0.025em; margin: 0 0 0.9rem; }
+#features .card.hl p { font-size: 1.02rem; }
+#features .card.hl .feature-list { margin-top: 1.3rem; gap: 0.9rem; }
+#features .card.hl .feature-list span { font-size: 0.96rem; line-height: 1.5; }
+#features .card.hl .feature-list .dot { margin-top: 1px; }
+#features .card.hl--stack { display: flex; flex-direction: column; }
+#features .card.hl--stack > .more { align-self: flex-start; margin-top: auto; padding-top: 1.3rem; }
+#features .card.feature-hero.hl .phone-pair img { max-height: 500px; }   /* showcase phones larger than in the groups */
+#features .card.hl--stack .phone-pair { margin-top: 1.6rem; }
+#features .card.hl--stack .phone-pair img { max-height: 330px; }
+#features .card.hl p.hl-fine { margin-top: 1rem; font-size: 0.85rem; color: var(--faint); }
+/* Tile Challenges: the four games as small tiles */
+#features .hl-modes { list-style: none; margin: 1.3rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+#features .hl-modes li { border: 1px solid var(--border-2); border-radius: var(--radius-sm); background: rgba(41, 151, 255, 0.07); padding: 0.9rem 1rem; }
+#features .hl-modes svg { display: block; width: 22px; height: 22px; color: #5fd9ff; margin-bottom: 0.5rem; }
+#features .hl-modes b { display: block; color: var(--text); font-size: 1.05rem; font-weight: 800; }
+#features .hl-modes span { display: block; margin-top: 0.15rem; color: var(--muted); font-size: 0.88rem; line-height: 1.4; }
+/* Works with your monitor: monitors and how they connect, in the order of the page's rule */
+#features .monitor-wall { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+#features .monitor-wall li { border: 1px solid var(--border-2); border-radius: var(--radius-sm); background: var(--surface); padding: 0.85rem 1rem; }
+#features .monitor-wall li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+#features .monitor-wall b { display: block; color: var(--text); font-size: 1rem; font-weight: 800; line-height: 1.25; }
+#features .monitor-wall b .tag { margin-left: 0.35rem; }
+#features .monitor-wall li > span { display: block; margin-top: 0.2rem; color: var(--muted); font-size: 0.9rem; }
+#features .monitor-wall li > small { display: block; margin-top: 0.15rem; color: var(--faint); font-size: 0.8rem; }
+
+/* Index line between the highlights and the detail groups */
+#features .fdetail-head { margin-top: clamp(3.5rem, 2.4rem + 3.5vw, 5.5rem); text-align: center; }
+#features .fdetail-kicker { margin: 0 0 1.1rem; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+#features .feature-jump { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
+#features .feature-jump .chip { text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+#features .feature-jump .chip:hover { border-color: var(--border-2); color: var(--text); }
+
+/* Groups. html already reserves banner + nav (scroll-padding-top 128px); scroll-margin ADDS to
+   that, so a small value is enough to land the group title just below the nav */
+#features .fgroup { margin-top: clamp(3rem, 2rem + 3vw, 4.5rem); scroll-margin-top: 16px; }
+#features .fgroup-head { max-width: 72ch; margin-bottom: 1.4rem; }
+#features .fgroup-head h3 { font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); margin: 0 0 0.5rem; }
+#features .fgroup-head h3 .tag { font-size: 0.7rem; vertical-align: middle; }
+#features .fgroup-head p { color: var(--muted); font-size: 1.02rem; }
+#features .card h4 { font-size: 1.3rem; font-weight: 900; line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 0.5rem; }
+#features .card .more { display: inline-block; margin-top: 0.9rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+#features .card .more::after { content: " \2192"; }
+#features .card .more:hover { text-decoration: underline; }
+#features .card.feature-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+#features .phone-pair { display: flex; gap: 1rem; justify-content: center; align-items: flex-start; }
+#features .phone-pair figure,
+#features .hero-figure { margin: 0; text-align: center; min-width: 0; }
+#features .phone-pair figure { flex: 0 1 auto; }
+#features .phone-pair img { display: block; max-height: 420px; height: auto; width: auto; max-width: 100%; margin-inline: auto; border-radius: 22px; border: 1px solid var(--border); }
+#features .phone-pair figcaption,
+#features .hero-figure figcaption { font-size: 0.8rem; color: var(--faint); margin-top: 0.55rem; }
+#features .hero-photo { display: block; width: 100%; max-width: 560px; height: auto; margin-inline: auto; border-radius: 22px; border: 1px solid var(--border); }
+#features .hero-photo.portrait { max-width: 400px; }
+#features .card .thumb { display: block; width: 100%; height: 300px; object-fit: contain; object-position: center; margin: 0 0 1.2rem; }
+#features .card.strip { padding: 1.3rem 1.7rem; }
+#features .card.strip h4 { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.7rem; }
+#features .card.strip ul { list-style: none; margin: 0; padding: 0; columns: 3; column-gap: 2rem; }
+#features .card.strip li { break-inside: avoid; position: relative; padding: 0.25rem 0 0.25rem 1.1rem; color: var(--muted); font-size: 0.95rem; }
+#features .card.strip li::before { content: ""; position: absolute; left: 0; top: 0.85em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-2); }
+@media (min-width: 1041px) {
+    #features .card.hl--flip .hl-media { order: -1; }
+}
+@media (max-width: 1040px) {
+    #features .card.feature-hero,
+    #features .card.feature-hero.hl { grid-template-columns: 1fr; }
+    /* the width sits on the figure (a percentage of the pair), not on the img — a percentage
+       inside a shrink-to-fit flex item would resolve against the image itself */
+    #features .phone-pair figure { flex: 0 1 auto; width: min(46%, 220px); }
+    #features .phone-pair img,
+    #features .card.feature-hero.hl .phone-pair img,
+    #features .card.hl--stack .phone-pair img { max-height: none; width: 100%; }
+    #features .hero-photo,
+    #features .hero-photo.portrait { max-width: 360px; }
+    #features .card.strip ul { columns: 2; }
+}
+@media (max-width: 560px) {
+    #features .card .thumb { height: 240px; }
+    #features .card.strip ul { columns: 1; }
+    #features .monitor-wall { grid-template-columns: 1fr; }
+}
+@media (max-width: 380px) {
+    #features .hl-modes { grid-template-columns: 1fr; }
+}
+
 /* ==========================================================================
    Responsive
    ========================================================================== */
