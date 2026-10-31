@@ -884,8 +884,10 @@ footer { border-top: 1px solid var(--border); padding-block: 3rem; }
    2026-10-31, the 8.5 copy: both lines are SHORTER than the 8.4 ones they replace — the full
    sentence 501px against 517px, the short one 215px against 231px (measured with the system font at
    0.92rem/600/-0.01em, calibrated on the 8.4 sentence: 516px computed for 517px in Safari), so the
-   780px threshold and the 56px/78px reservations below keep their margins. Not yet confirmed in a
-   real viewport (no browser in that session) — do that before the release push.
+   780px threshold and the 56px/78px reservations below keep their margins. Confirmed in a real
+   viewport the same evening (local server, browser pane): 780px full sentence on one line, 779/700/360px
+   short copy on one line, 320px short copy on two lines inside the 78px reservation, nav clear of the
+   banner at every width.
    ★ Measure in a real viewport, never on a width-constrained clone, and re-measure when the text
    changes. */
 .announce-text--short { display: none; }
