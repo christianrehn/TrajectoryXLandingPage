@@ -47,7 +47,7 @@
     <link rel="canonical" href="https://trajectoryx.com/"/>
 
     <link rel="stylesheet" href="css/fonts.css"/>
-    <link rel="stylesheet" href="css/new.css?v=11"/>
+    <link rel="stylesheet" href="css/new.css?v=12"/>
     <link rel="stylesheet" href="css/light.css?v=6"/>
     <link rel="stylesheet" href="css/alt-bands.css?v=7"/>
 
@@ -272,10 +272,18 @@
                         <p class="hl-fine">Compare any two of your own shots — the app doesn't know who is swinging, so pick shots of the same golfer.</p>
                         <a class="more" href="#swing">More on swing video</a>
                     </div>
-                    <figure class="hero-figure hl-media">
-                        <img class="hero-photo portrait" src="images/features-tracer-detail.jpg?v=4" alt="Swing video with the ball tracer: a golfer in the finish on a golf-course tee, a computed flight drawn as a red line from the ball into the sky" width="780" height="916" loading="lazy" decoding="async"/>
-                        <figcaption>The Tracer tool: a driver off the tee, the line is the computed flight</figcaption>
-                    </figure>
+                    <!-- Swing Compare and the Tracer tool side by side at one height: each figure is as wide as its image's
+                         aspect ratio (--ar = width / height), see .phone-pair--even in css/new.css -->
+                    <div class="phone-pair phone-pair--even hl-media">
+                        <figure style="--ar:0.4604">
+                            <img src="images/features-compare.jpg?v=1" alt="Swing Compare on iPhone: two down-the-line swings from the golf course side by side, both at the top of the backswing, with Ball Speed, Efficiency, Carry Distance and Carry Offline for A, B and B − A below and the positions Address, Top, Impact and End as tabs" width="780" height="1694" loading="lazy" decoding="async"/>
+                            <figcaption>Swing Compare: two swings, in step at the top</figcaption>
+                        </figure>
+                        <figure style="--ar:0.8515">
+                            <img src="images/features-tracer-detail.jpg?v=5" alt="Swing video with the ball tracer: a golfer in the finish on a golf-course tee, a computed flight drawn as a red line that leaves the ball toward the fairway and climbs into the sky" width="780" height="916" loading="lazy" decoding="async"/>
+                            <figcaption>The Tracer tool: a driver off the tee, the line is the computed flight</figcaption>
+                        </figure>
+                    </div>
                 </article>
 
                 <!-- (b) My Bubble + Aim Planner (8.5) -->
@@ -364,7 +372,7 @@
                     </div>
                     <div class="phone-pair hl-media">
                         <figure>
-                            <img src="images/swing-tracer.jpg?v=4" alt="TrajectoryX swing player with the ball tracer: a computed ball flight drawn over a driver swing on the golf course, the Tracer tool open, and the positions Address, Top, Impact and End as tabs over the timeline below" width="780" height="1696" loading="lazy" decoding="async"/>
+                            <img src="images/swing-tracer.jpg?v=5" alt="TrajectoryX swing player with the ball tracer: a computed ball flight drawn over a driver swing on the golf course, the Tracer tool open, and the positions Address, Top, Impact and End as tabs over the timeline below" width="780" height="1696" loading="lazy" decoding="async"/>
                             <figcaption>Every shot gets its clip — here with the tracer</figcaption>
                         </figure>
                     </div>
@@ -802,7 +810,7 @@
                 <figcaption>Dispersion &amp; target at a glance</figcaption>
             </figure>
             <figure class="phone reveal" style="--delay:80ms">
-                <img src="images/features-range-data.jpg?v=2" alt="The Data tab: ball speed, launch and side angle, spin, carry, offline and total as tiles, each with its session average and spread" width="780" height="1694" loading="lazy" decoding="async"/>
+                <img src="images/features-range-data.jpg?v=3" alt="The Data tab after nine driver shots: ball speed, launch and side angle, spin, carry, offline and total as tiles, each with its session average and spread, and corridors on ball speed, launch angle and carry" width="780" height="1694" loading="lazy" decoding="async"/>
                 <figcaption>Every value at a glance</figcaption>
             </figure>
             <figure class="phone reveal" style="--delay:160ms">
@@ -933,12 +941,16 @@
         <div class="visual reveal" style="--delay:100ms">
             <div style="display:flex; gap:1rem; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
                 <figure class="phone" style="flex:1 1 200px; max-width:260px;">
-                    <img src="images/swing-preview.jpg?v=4" alt="TrajectoryX swing player: a golfer at the top of the backswing, the video edge to edge, with the positions Address, Top, Impact and End as tabs over the timeline below" width="598" height="1300" loading="lazy" decoding="async"/>
+                    <img src="images/swing-preview.jpg?v=5" alt="TrajectoryX swing player: a golfer filmed face-on at the top of the backswing, the video edge to edge, with the positions Address, Top, Impact and End as tabs over the timeline below" width="598" height="1300" loading="lazy" decoding="async"/>
                     <figcaption>Auto-detected: Address · Top · Impact · End</figcaption>
                 </figure>
                 <figure class="phone" style="flex:1 1 200px; max-width:260px;">
-                    <img src="images/swing-tracer.jpg?v=4" alt="TrajectoryX swing player with the ball tracer: a computed ball flight drawn over a driver swing on the golf course, the Tracer tool open, and the positions Address, Top, Impact and End as tabs over the timeline below" width="780" height="1696" loading="lazy" decoding="async"/>
+                    <img src="images/swing-tracer-2.jpg?v=1" alt="TrajectoryX swing player with the ball tracer: a golfer in the finish on a tee between two rows of trees, the computed flight of the drive drawn from the ball up into the sky, the Tracer tool open, and the positions Address, Top, Impact and End as tabs over the timeline below" width="780" height="1696" loading="lazy" decoding="async"/>
                     <figcaption>Ball tracer in your own video</figcaption>
+                </figure>
+                <figure class="phone" style="flex:1 1 200px; max-width:260px;">
+                    <img src="images/features-compare-2.jpg?v=1" alt="Swing Compare on iPhone: two down-the-line drives from golf-course tees side by side, both in the finish, with Ball Speed, Efficiency, Carry Distance and Carry Offline for A, B and B − A below and the positions Address, Top, Impact and End as tabs" width="780" height="1694" loading="lazy" decoding="async"/>
+                    <figcaption>Swing Compare: two swings, in step to the finish</figcaption>
                 </figure>
             </div>
         </div>

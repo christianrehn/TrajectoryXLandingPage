@@ -762,6 +762,13 @@ footer { border-top: 1px solid var(--border); padding-block: 3rem; }
 @media (max-width: 380px) {
     #features .hl-modes { grid-template-columns: 1fr; }
 }
+/* Two images of different shapes at one height (the 8.5 player card: the Swing Compare phone next to the
+   tracer detail). Each figure grows with its image's aspect ratio (--ar = width / height on the figure), so
+   both images end at the same height on every screen width; after the 1040px rule above, which it overrides. */
+#features .phone-pair--even { max-width: 540px; margin-inline: auto; }
+#features .phone-pair--even figure { flex: var(--ar, 0.46) 1 0; width: auto; min-width: 0; }
+#features .phone-pair--even img,
+#features .card.feature-hero.hl .phone-pair--even img { width: 100%; max-height: none; }
 
 /* ==========================================================================
    Responsive
