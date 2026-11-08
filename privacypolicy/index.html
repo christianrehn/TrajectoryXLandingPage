@@ -71,21 +71,37 @@
         <h1 style="font-size: clamp(2.2rem, 1.6rem + 3vw, 3.4rem); margin-top: 1rem;">
             Privacy <span class="grad-text">Policy</span>
         </h1>
-        <p class="updated"><strong>Last updated</strong> · June 28 2026</p>
+        <p class="updated"><strong>Last updated</strong> · November 8 2026</p>
 
         <div class="prose">
             <h2>Personal Data</h2>
-            <p>I do not collect any of your data. Nothing.</p>
-            <p>Everything you do is saved on-device.</p>
-            <p>The app does not display any ads or send anything to any server (the only exception is the optional AI Coach described below, which you must explicitly enable). So the app does not track you using an advertising identifier or anything of the sort.</p>
+            <p>I do not receive any of your data. The app has no server of its own, and it sends nothing to me.</p>
+            <p>Everything you do is saved on-device. The app has no cloud sync of its own; if you back up your iPhone or iPad to iCloud or to a computer, iOS includes the app’s data in that backup (swing videos are left out), and an encrypted backup also contains your AI API key.</p>
+            <p>The app does not display any ads and does not track you using an advertising identifier or anything of the sort. It contains no analytics, crash-reporting or advertising code. Data leaves your device only in the cases described below.</p>
 
             <h2>AI Coach</h2>
             <div class="lead-note">
-                <p style="margin-top:0;"><strong>In short:</strong> The optional AI analysis sends your play data to the AI provider you chose (Claude / ChatGPT / Gemini); your API key is stored locally on your device.</p>
+                <p style="margin-top:0;"><strong>In short:</strong> When an analysis runs, the optional AI Coach sends your shot data, session name, club names and your own drills to the AI provider you choose (Claude / ChatGPT / Gemini); your API key is stored only on your device.</p>
             </div>
-            <p>The AI Coach feature is turned off by default. It only works if you explicitly enable it in Settings and add your own API key for a third-party AI provider of your choice (Anthropic / Claude, OpenAI / ChatGPT or Google / Gemini).</p>
-            <p>Only when both of these conditions are met, your performance and usage data (such as shot and session values) is sent to the AI provider you selected so it can generate coaching feedback. This data is then processed by that provider under its own privacy policy and terms of service.</p>
-            <p>If you do not enable the AI Coach and do not provide an API key, no data ever leaves your device. Your API key is stored only on your device and is never transmitted to me or to any other party except the provider you chose.</p>
+            <p>The AI Coach feature is turned off by default (unless you already added an API key in an earlier version of the app). It only works if you explicitly enable it in Settings and add your own API key for a third-party AI provider of your choice (Anthropic / Claude, OpenAI / ChatGPT or Google / Gemini).</p>
+            <p>When an analysis runs — when you tap <strong>Analyze with AI</strong> or, if you turn it on, after every shot — your shot data, session name, club names and your own drills are sent directly from your device to the AI provider you chose, along with the session date, your launch monitor model and your handedness, so it can generate coaching feedback. This data is then processed by that provider under its own privacy policy and terms of service. None of it reaches me.</p>
+            <p>If you do not enable the AI Coach and do not provide an API key, nothing is ever sent to an AI provider. Your API key is stored only on your device (and in your encrypted device backup), and the app never sends it to me or to anyone except the provider you chose.</p>
+
+            <h2>Apple Services</h2>
+            <p><strong>Game Center:</strong> When you open the Compete tab, the app connects to your Game Center account (or shows Apple’s sign-in). When you play a competition there, your result (for example your longest carry or your TrackMan score sum) is submitted to Apple’s global Game Center leaderboard right after the shot or drill, where other players can see it together with your Game Center name, depending on your Game Center privacy settings. If you do not want this, do not play competitions, or sign out of Game Center in iOS Settings. Inviting players to a multiplayer match also goes through Game Center.</p>
+            <p><strong>App Store:</strong> Subscriptions and purchases are handled by Apple. Each time the app starts, it asks the App Store for your purchases, the available subscriptions and your App Store country. The app never receives your Apple ID or payment details.</p>
+            <p><strong>Siri and Shortcuts:</strong> The app makes your club names available to Siri and the Shortcuts app so you can switch clubs by voice.</p>
+            <p><strong>Crash reports:</strong> If you have allowed iOS to share analytics with app developers, Apple may pass me crash reports and anonymous usage statistics.</p>
+
+            <h2>Location, Camera and Microphone</h2>
+            <p>If <strong>Store Shot GPS Location</strong> is on in Settings (it is on by default), the app saves your position with each shot and uses it for the ball-flight calculation. For this it asks for access to your location, also while the app runs in the background. Your location is not sent to the AI Coach or anywhere else; apart from your device backup, it leaves your device only inside a session you export yourself (see below). You can turn it off in Settings at any time.</p>
+            <p>Swing videos are recorded with sound and stored on your device; the app also listens for the sound of impact to start a recording, on the device. Videos are copied to your Photos library only if you turn that on in Settings (off by default) or choose <strong>Save Video</strong> — and from there to iCloud Photos if you use it.</p>
+
+            <h2>Launch Monitors and Your Local Network</h2>
+            <p>The app connects to your launch monitor directly over Wi‑Fi, your local network or Bluetooth, and only after you start a connection in the app. These connections carry device commands and shot data, nothing about you; a TrackMan also receives the app’s name, version and a random ID for this installation. To find a launch monitor, the app briefly contacts other devices on the same network or announces itself there; these requests contain no data either. For the Garmin R10, the Garmin Golf app on your local network connects to TrajectoryX. With a TrackMan, the app downloads its swing videos to your device (Settings › <strong>Use TrackMan Camera Videos</strong>, on by default).</p>
+
+            <h2>Sharing and Exports</h2>
+            <p>When you share or export something yourself — a session (with its swing videos and, if stored, the GPS position of each shot), a shot table, a swing video, a custom drill or the connection log — it goes only to the place you pick, for example a message, AirDrop or Files (which may be iCloud Drive). The connection log is meant for support and contains technical details such as IP addresses and Wi‑Fi names.</p>
 
             <h2>Any Question?</h2>
             <p>If you have any issues to report or feedback to make about this privacy policy or anything else, you can contact me at <a href="mailto:info@TrajectoryX.com">info@TrajectoryX.com</a>.</p>
