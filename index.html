@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
         script-src 'self';
-        style-src 'self' 'unsafe-inline';
+        style-src 'self';
         font-src 'self';
         img-src 'self' data:;
         connect-src 'self';
@@ -50,6 +50,8 @@
     <link rel="stylesheet" href="css/new.css?v=13"/>
     <link rel="stylesheet" href="css/light.css?v=6"/>
     <link rel="stylesheet" href="css/alt-bands.css?v=7"/>
+    <link rel="stylesheet" href="css/media-sections.css?v=1"/>
+    <link rel="stylesheet" href="css/utilities.css?v=1"/>
 
     <!-- Structured data for rich search results -->
     <script type="application/ld+json">
@@ -157,22 +159,22 @@
     <div class="container hero-grid">
         <div class="hero-copy">
             <span class="eyebrow reveal">Free · For iPhone &amp; iPad · Launch Monitor Companion</span>
-            <h1 class="reveal" style="--delay:60ms">
+            <h1 class="reveal delay-60">
                 Turn your launch monitor into<br/>
                 a complete <span class="grad-text">practice studio</span>
             </h1>
-            <p class="lead reveal" style="--delay:120ms">
+            <p class="lead reveal delay-120">
                 Practice range shots, Combine tests and drills you build yourself, learn your real shot pattern
                 with My Bubble, compete online, and review automatic swing video with a TV-style ball tracer in a new player — two swings side by side — all from your Foresight GCQuad, QuadMAX, GC3 or Bushnell Launch Pro, TrackMan 4, Full Swing KIT, or Garmin R10.
             </p>
-            <div class="hero-actions reveal" style="--delay:180ms">
+            <div class="hero-actions reveal delay-180">
                 <a class="appstore-btn" href="https://apps.apple.com/app/trajectoryx/id6502289160?platform=iphone"
                    target="_blank" rel="noopener" aria-label="Download on the App Store">
                     <img src="images/appstore.png" alt="Download on the App Store" width="775" height="300" decoding="async"/>
                 </a>
                 <a class="btn btn-ghost" href="#features">Explore features</a>
             </div>
-            <div class="compat-chips reveal" style="--delay:240ms">
+            <div class="compat-chips reveal delay-240">
                 <span class="chip">Foresight GCQuad / QuadMAX</span>
                 <span class="chip">Foresight GC3 / GC3S</span>
                 <span class="chip">Bushnell Launch Pro</span>
@@ -183,7 +185,7 @@
             </div>
         </div>
 
-        <div class="hero-visual reveal" style="--delay:120ms">
+        <div class="hero-visual reveal delay-120">
             <video poster="images/range3d-preview.jpg?v=4" width="1206" height="2454"
                    autoplay muted loop playsinline preload="metadata"
                    aria-label="TrajectoryX Range: nine measured driver shots arrive one by one, with ball speed, carry, launch angle and backspin on the cards below the Offline, Side, Height and Launch views, then the shots fly on the 3D range with the Down the Line and Follow cameras">
@@ -194,7 +196,7 @@
 </section>
 
 <!-- ===================== STATS ===================== -->
-<section style="padding-block: 0;">
+<section class="pad-block-0">
     <div class="container">
         <div class="stats reveal">
             <div class="stat"><b>11</b><span>Launch monitors</span></div>
@@ -208,16 +210,6 @@
 <!-- ===================== FULL-BLEED MEDIA SECTIONS ===================== -->
 <!-- Shared styles for the sections with a video background (#gallery, #download). The time-limited
      summer promo these were first written for has been removed, and its rules with it. -->
-<style>
-    /* Full-bleed media background for a section (Apple-style) */
-    .section-media{position:relative;overflow:hidden}
-    .section-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
-    .section-bg-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0.62) 0%,rgba(0,0,0,0.28) 26%,rgba(0,0,0,0.30) 72%,rgba(0,0,0,0.64) 100%)}
-    .section-media>.container{position:relative;z-index:2}
-    #gallery{background-image:url(images/range-driving-poster.jpg);background-size:cover;background-position:center}
-    #download{background-image:url(images/aerial-golf-poster.jpg);background-size:cover;background-position:center}
-    @media (prefers-reduced-motion:reduce){.section-bg-video{display:none}}
-</style>
 <!-- ===================== FEATURES ===================== -->
 <!-- Layout: section head → eight HIGHLIGHT cards (div#features-highlights) → an index of the five
      detail groups (jump chips) → the five groups (div.fgroup, NOT sections — the scrollspy in
@@ -273,11 +265,11 @@
                     <!-- Swing Compare and the Tracer tool side by side at one height: each figure is as wide as its image's
                          aspect ratio (--ar = width / height), see .phone-pair--even in css/new.css -->
                     <div class="phone-pair phone-pair--even hl-media">
-                        <figure style="--ar:0.4604">
+                        <figure class="ar-4604">
                             <img src="images/features-compare.jpg?v=1" alt="Swing Compare on iPhone: two down-the-line swings from the golf course side by side, both at the top of the backswing, with Ball Speed, Efficiency, Carry Distance and Carry Offline for A, B and B − A below and the positions Address, Top, Impact and End as tabs" width="780" height="1694" loading="lazy" decoding="async"/>
                             <figcaption>Swing Compare: two swings, in step at the top</figcaption>
                         </figure>
-                        <figure style="--ar:0.8515">
+                        <figure class="ar-8515">
                             <img src="images/features-tracer-detail.jpg?v=6" alt="Swing video with the ball tracer: a golfer in the finish on a golf-course tee, the ball flight drawn as a red line that leaves the ball toward the fairway and climbs into the sky" width="780" height="916" loading="lazy" decoding="async"/>
                             <figcaption>The Tracer tool: a driver off the tee, traced toward the fairway</figcaption>
                         </figure>
@@ -313,7 +305,7 @@
                 </article>
 
                 <!-- (c) The 8.5 look: tiles, shot table, tabs, range bar, player -->
-                <article class="card span-3 hl hl--stack reveal" style="--delay:80ms">
+                <article class="card span-3 hl hl--stack reveal delay-80">
                     <p class="hl-kicker">A fresh look <span class="tag">New in 8.5</span></p>
                     <h3>Numbers that read <span class="grad-text">at a glance</span></h3>
                     <p>The range got calmer, not emptier — the same numbers, laid out so you read them from the mat.</p>
@@ -481,7 +473,7 @@
                 </article>
 
                 <!-- (g) 3D Range (takes over the former "Your shot in 3D" card) -->
-                <article class="card span-3 hl hl--stack reveal" style="--delay:80ms">
+                <article class="card span-3 hl hl--stack reveal delay-80">
                     <p class="hl-kicker">3D Range</p>
                     <h3>Watch every shot <span class="grad-text">fly in 3D</span></h3>
                     <p>Each shot replays in a 3D driving range with a live tracer, following the flight the app computes from your launch monitor's data.</p>
@@ -579,14 +571,14 @@
                     <h4>Your tiles, your layout</h4>
                     <p>Long-press to reorder or hide tiles, pinch for one to three columns, and double-tap one to read it big from the mat. Every tile shows its session average and spread. And each launch monitor shows only the numbers it really delivers — no empty face-angle tiles on a unit that can't see the face.</p>
                 </article>
-                <article class="card span-2 reveal" style="--delay:80ms">
+                <article class="card span-2 reveal delay-80">
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14.5h18M9 4v16"/></svg>
                     </div>
                     <h4>Every shot in one table</h4>
                     <p>The Table tab lists every shot of the session with average and standard deviation per club, and names the ball flight model and roll behind each total. Tap a row to see that shot, untick a mishit and it drops out of the stats, tap the club cell to fix a wrong club, double-tap for fullscreen — and export to CSV or Excel.</p>
                 </article>
-                <article class="card span-2 reveal" style="--delay:160ms">
+                <article class="card span-2 reveal delay-160">
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V4"/><path d="M2.5 6.5L5 4l2.5 2.5"/><path d="M5 20L18 9"/><path d="M13.5 9H18v4.5"/><path d="M5 20h15"/><path d="M17.5 17.5L20 20l-2.5 2.5"/></svg>
                     </div>
@@ -601,7 +593,7 @@
                     <h4>Flag, green — and a score for every shot</h4>
                     <p>Put a flag and green on the range: drag to set the distance, pinch the green into a wide or deep ellipse, like the greens you play to. With a flag out, every shot gets a TM Score from 0 to 100 and strokes gained against that distance — and the same flag is where My Bubble counts your balls.</p>
                 </article>
-                <article class="card span-3 reveal" style="--delay:80ms">
+                <article class="card span-3 reveal delay-80">
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
                     </div>
@@ -616,7 +608,7 @@
                     <h4>Three ball flight models <span class="tag">New in 8.5</span></h4>
                     <p>TrajectoryX Default is free and designed in-house. Trajectory Model+ flies the ball like Foresight's app — and new in 8.5, Trajectory Model TM flies and rolls like TrackMan's. The roll is a choice of its own — TrajectoryX, Foresight-like or TrackMan-like, with any model; the Foresight-like and TrackMan-like rolls read the landing ground you set per environment: Landing Surface, Stimp and Landing Slope. Model+, Model TM and the Foresight-like and TrackMan-like rolls are part of Pro and share 10 free shots a day.</p>
                 </article>
-                <article class="card span-3 reveal" style="--delay:80ms">
+                <article class="card span-3 reveal delay-80">
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
                     </div>
@@ -638,12 +630,12 @@
                     <h4>Perfect your driver</h4>
                     <p>Run the TM Driver test: six drives, each scored from 0 to 100 on length and straightness, with your average and consistency at a glance. Repeat it in a month and see in one number whether your driver got better.</p>
                 </article>
-                <article class="card span-2 reveal" style="--delay:80ms">
+                <article class="card span-2 reveal delay-80">
                     <img class="thumb" src="images/drill_grouped.png?v=2" alt="Target-circle pitching drill: four shots around the target with the score radii, next to the shot table" width="2100" height="2300" loading="lazy" decoding="async"/>
                     <h4>Wedge &amp; approach game</h4>
                     <p>Play the Trackman Combine distance by distance, drop your worst shots and see strokes gained against the PGA Tour average. Sharpen your wedges with spin drills that reward stopping power and target-circle pitching to fixed or random distances, in yards or meters.</p>
                 </article>
-                <article class="card span-2 reveal" style="--delay:160ms">
+                <article class="card span-2 reveal delay-160">
                     <img class="thumb" src="images/competitions.png?v=2" alt="The Compete tab with Longest Drive Carry, Best 10 Drives TM Score and Best ½ TM Combine, and the Game Center leaderboard for Longest Drive Carry" width="2000" height="2200" loading="lazy" decoding="async"/>
                     <h4>Online competitions</h4>
                     <p>Go for the longest drive, your best ten drives by TM Score or half a Combine, and compare with friends or golfers worldwide on Apple Game Center. Every shot flies under the same standard conditions — fair for all, and usually a bit shorter than your monitor shows.</p>
@@ -656,7 +648,7 @@
                     <h4>Ladders and fewest strokes</h4>
                     <p>Work through a distance ladder rung by rung with the retries you allow, or finish a set of targets in As Few Strokes As Possible, where you choose what a miss costs: retry, drop back or restart. Start from a predefined drill or set your own distances, rounds, unit and scoring.</p>
                 </article>
-                <article class="card span-3 reveal" style="--delay:80ms">
+                <article class="card span-3 reveal delay-80">
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v5M15 4v5"/></svg>
                     </div>
@@ -682,7 +674,7 @@
                     <h4>Zoom in, and set the slope once</h4>
                     <p>Pinch to zoom into any frame. If your range climbs or falls, set the tracer's landing slope once — the line comes down where your balls do, and the app remembers the setting.</p>
                 </article>
-                <article class="card span-3 reveal" style="--delay:80ms">
+                <article class="card span-3 reveal delay-80">
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </div>
@@ -706,14 +698,14 @@
                     <h4>Guided connection</h4>
                     <p>Pick your monitor and the app walks you through the steps, joining the unit's Wi-Fi for you where there is one. Next time it's already selected — just tap Continue. While connected, you see battery, device temperature and whether your Foresight unit sends full ball-and-club data or ball only.</p>
                 </article>
-                <article class="card span-2 reveal" style="--delay:80ms">
+                <article class="card span-2 reveal delay-80">
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
                     </div>
                     <h4>GCQuad and GC3 over Bluetooth</h4>
                     <p>Connect a Foresight GCQuad or GC3 over Bluetooth instead of its Wi-Fi hotspot — your phone stays on your normal network and keeps its internet while you practice. Several units in the room? The app lists them by serial number and remembers yours.</p>
                 </article>
-                <article class="card span-2 reveal" style="--delay:160ms">
+                <article class="card span-2 reveal delay-160">
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
                     </div>
@@ -728,7 +720,7 @@
                     <h4>Know when the monitor is ready</h4>
                     <p>A big orange notice tells you when a Foresight monitor is waiting — several balls in view, or the ball outside the hitting zone — and disappears the moment it's ready. If the link drops, the app notices within seconds and reconnects on its own when it can.</p>
                 </article>
-                <article class="card span-3 reveal" style="--delay:80ms">
+                <article class="card span-3 reveal delay-80">
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18"/><path d="M6.5 8h3M6.5 12h3M14.5 8h3M14.5 12h3"/></svg>
                     </div>
@@ -767,7 +759,7 @@
                     <p>Every session stays on your device — search, rename, filter for sessions with videos or launch-monitor shots, and reopen any of them. Export one or several, videos included, and import them on another iPhone or iPad — or send the shot table as CSV or Excel.</p>
                     <a class="more" href="#sessions">Export &amp; import</a>
                 </article>
-                <article class="card span-3 reveal" style="--delay:80ms">
+                <article class="card span-3 reveal delay-80">
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M18.5 15.5l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></svg>
                     </div>
@@ -811,11 +803,11 @@
                 <img src="images/features-range-offline.jpg?v=2" alt="The range's Offline view: nine shots around the green target circle with their dispersion ellipse, and the computed flight line of the last shot" width="780" height="1694" loading="lazy" decoding="async"/>
                 <figcaption>Dispersion &amp; target at a glance</figcaption>
             </figure>
-            <figure class="phone reveal" style="--delay:80ms">
+            <figure class="phone reveal delay-80">
                 <img src="images/features-range-data.jpg?v=3" alt="The Data tab after nine driver shots: ball speed, launch and side angle, spin, carry, offline and total as tiles, each with its session average and spread, and corridors on ball speed, launch angle and carry" width="780" height="1694" loading="lazy" decoding="async"/>
                 <figcaption>Every value at a glance</figcaption>
             </figure>
-            <figure class="phone reveal" style="--delay:160ms">
+            <figure class="phone reveal delay-160">
                 <img src="images/features-connect.jpg?v=2" alt="The connect screen: pick your Foresight GCQuad / QuadMAX or GC3 — with the GC3S and Bushnell Launch Pro — TrackMan 4, Full Swing KIT, Garmin Approach R10 or OpenFlight launch monitor" width="780" height="1694" loading="lazy" decoding="async"/>
                 <figcaption>Connect Foresight, Bushnell, TrackMan &amp; more</figcaption>
             </figure>
@@ -839,42 +831,42 @@
                 <h3>Foresight Sports GCQuad / QuadMAX</h3>
                 <p>Native, encrypted connection. Full ball, club and spin data is read in real time and used to calculate and display the ball flight for every shot. While you're connected, the unit's battery and temperature are shown at a glance — for the whole Foresight family. <b>Connect over Bluetooth</b> instead of the unit's Wi-Fi hotspot — your iPhone stays on your normal network and keeps its internet; with several units in the room, the app lists them by serial number and remembers yours.</p>
             </article>
-            <article class="card reveal" style="--delay:80ms">
+            <article class="card reveal delay-80">
                 <div class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><circle cx="12" cy="11" r="3"/></svg>
                 </div>
                 <h3>Foresight GC3, GC3S &amp; Bushnell Launch Pro</h3>
                 <p>Connect your Foresight Sports GC3 or GC3S — or the Bushnell Launch Pro, which shares the very same connection — and get the full TrajectoryX experience: live ball, club and spin data on the range, just like the GCQuad and QuadMAX. <b>Connect over Bluetooth</b> instead of the unit's Wi-Fi hotspot, and your iPhone stays on your normal network with its internet intact.</p>
             </article>
-            <article class="card reveal" style="--delay:160ms">
+            <article class="card reveal delay-160">
                 <div class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V9a2 2 0 0 1 2-2h5l2-3h5a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="13" cy="12" r="3.2"/></svg>
                 </div>
                 <h3>TrackMan 4</h3>
                 <p>Connect your TrackMan 4 directly over Wi-Fi — no simulator software in between. You get live shot data, an instant flight preview about a second after impact, swing videos straight from the TrackMan camera, an aim dialog with the device's own camera view, and a view-only mode for when someone else is running the unit. The TrackMan's own carry, total and height show up as extra tiles next to the app's ball flight model — and since 8.5 the app has a TrackMan-like model of its own, Trajectory Model TM, that flies and rolls like TrackMan's.</p>
             </article>
-            <article class="card reveal" style="--delay:240ms">
+            <article class="card reveal delay-240">
                 <div class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M8.5 8.5a5 5 0 0 0 0 7"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M5.6 5.6a9 9 0 0 0 0 12.8"/><path d="M18.4 5.6a9 9 0 0 1 0 12.8"/></svg>
                 </div>
                 <h3>Full Swing KIT</h3>
                 <p>Pair the Full Swing KIT over Bluetooth — there is no Wi-Fi to join — and hit balls on the range, in drills and in competitions like with any other unit. The KIT's own carry, total and height show up as extra tiles right next to TrajectoryX's ball flight model, so you can compare the two at a glance.</p>
             </article>
-            <article class="card reveal" style="--delay:320ms">
+            <article class="card reveal delay-320">
                 <div class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><circle cx="12" cy="11" r="3"/></svg>
                 </div>
                 <h3>Foresight GCHawk &amp; Falcon <span class="tag">Experimental</span></h3>
                 <p>These fixed-install units speak the same Foresight protocol, so TrajectoryX can connect to them too. Support is experimental for now — give it a try and let us know how it goes.</p>
             </article>
-            <article class="card reveal" style="--delay:400ms">
+            <article class="card reveal delay-400">
                 <div class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 16 0"/><path d="M7 12a5 5 0 0 1 10 0"/><circle cx="12" cy="12" r="1.6"/></svg>
                 </div>
                 <h3>Garmin Approach R10 <span class="tag">E6 Connect</span></h3>
                 <p>Connect your Garmin Approach R10 through the E6 Connect protocol and use the same range, drill and competition features — no extra hardware required.</p>
             </article>
-            <article class="card reveal" style="--delay:480ms">
+            <article class="card reveal delay-480">
                 <div class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8l7-5 7 5"/><circle cx="12" cy="14" r="2.4"/></svg>
                 </div>
@@ -940,17 +932,17 @@
                 <p><b>Your body, measured from the video.</b> Shoulder turn, X&#8209;factor and a skeleton drawn on the paused frame — read straight from a face-on clip, no sensors and no suit. The measurement works; what it still needs is calibration we trust enough to put a number in front of you, so it stays off until then.</p>
             </div>
         </div>
-        <div class="visual reveal" style="--delay:100ms">
-            <div style="display:flex; gap:1rem; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
-                <figure class="phone" style="flex:1 1 200px; max-width:260px;">
+        <div class="visual reveal delay-100">
+            <div class="phone-row">
+                <figure class="phone phone-col">
                     <img src="images/swing-preview.jpg?v=6" alt="TrajectoryX swing video: a golfer at the top of the backswing with the swing points detected on the timeline" width="598" height="1300" loading="lazy" decoding="async"/>
                     <figcaption>Auto-detected: Start · Top · Impact · End</figcaption>
                 </figure>
-                <figure class="phone" style="flex:1 1 200px; max-width:260px;">
+                <figure class="phone phone-col">
                     <img src="images/swing-tracer-2.jpg?v=2" alt="TrajectoryX swing player with the ball tracer: a golfer in the finish on a tee, the fairway ahead between two rows of trees, the flight of the drive drawn from the ball up toward the fairway, the Tracer tool open, and the positions Address, Top, Impact and End as tabs over the timeline below" width="780" height="1696" loading="lazy" decoding="async"/>
                     <figcaption>Ball tracer in your own video</figcaption>
                 </figure>
-                <figure class="phone" style="flex:1 1 200px; max-width:260px;">
+                <figure class="phone phone-col">
                     <img src="images/features-compare-2.jpg?v=1" alt="Swing Compare on iPhone: two down-the-line swings from golf-course tees side by side, both in the finish, with Ball Speed, Efficiency, Carry Distance and Carry Offline for A, B and B − A below and the positions Address, Top, Impact and End as tabs" width="780" height="1694" loading="lazy" decoding="async"/>
                     <figcaption>Swing Compare: two swings, in step to the finish</figcaption>
                 </figure>
@@ -983,13 +975,13 @@
                 </li>
             </ul>
         </div>
-        <div class="visual reveal" style="--delay:100ms">
-            <div style="display:flex; gap:1rem; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
-                <figure class="phone" style="flex:1 1 200px; max-width:260px;">
+        <div class="visual reveal delay-100">
+            <div class="phone-row">
+                <figure class="phone phone-col">
                     <img src="images/range3d-shot.jpg?v=4" alt="TrajectoryX 3D Range — the realistic mountain scene (Down the Line camera): a driver shot replayed with its full tracer" width="1320" height="2868" loading="lazy" decoding="async"/>
                     <figcaption>Mountain &middot; Down the Line</figcaption>
                 </figure>
-                <figure class="phone" style="flex:1 1 200px; max-width:260px;">
+                <figure class="phone phone-col">
                     <img src="images/range3d-ocean.jpg?v=3" alt="TrajectoryX 3D Range — the ocean scene (Overhead camera): a driver shot over a palm-lined beach and open sea" width="1206" height="2622" loading="lazy" decoding="async"/>
                     <figcaption>Ocean &middot; Overhead</figcaption>
                 </figure>
@@ -1003,7 +995,7 @@
     <div class="container">
         <div class="section-head reveal">
             <span class="soon">Now available</span>
-            <h2 style="margin-top:1rem">Take your sessions <span class="grad-text">anywhere</span></h2>
+            <h2 class="mt-1">Take your sessions <span class="grad-text">anywhere</span></h2>
             <p>Export a whole practice session — every shot and its swing videos — as a single file. Save your best sessions, revisit them anytime, and move them to another iPhone or iPad — no cloud account required.</p>
         </div>
         <div class="bento">
@@ -1014,14 +1006,14 @@
                 <h3>Export a full session</h3>
                 <p>Bundle a session's shots, trajectories and swing videos into one shareable file — straight from the session list.</p>
             </article>
-            <article class="card span-2 reveal" style="--delay:80ms">
+            <article class="card span-2 reveal delay-80">
                 <div class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/><path d="M12 3v12M8 11l4 4 4-4"/></svg>
                 </div>
                 <h3>Import on another device</h3>
                 <p>Move a session to your iPad or a new iPhone and pick up right where you left off — every shot and video included.</p>
             </article>
-            <article class="card span-2 reveal" style="--delay:160ms">
+            <article class="card span-2 reveal delay-160">
                 <div class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v4H3z"/><path d="M5 11v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8"/><path d="M9.5 15h5"/></svg>
                 </div>
@@ -1037,7 +1029,7 @@
     <div class="container">
         <div class="section-head reveal">
             <span class="soon">Optional</span>
-            <h2 style="margin-top:1rem">Meet your <span class="grad-text">AI Coach</span></h2>
+            <h2 class="mt-1">Meet your <span class="grad-text">AI Coach</span></h2>
             <p>An optional extra, off until you add your own API key: the AI Coach reads your shot data and turns it into clear, actionable feedback — right inside TrajectoryX. Not available in mainland China.</p>
         </div>
         <div class="bento">
@@ -1048,14 +1040,14 @@
                 <h3>One-tap session analysis</h3>
                 <p>An overall grade for your session, your strengths, what to improve and a targeted drill to work on next — picked from the app's own drills, all from a single tap.</p>
             </article>
-            <article class="card span-2 reveal" style="--delay:80ms">
+            <article class="card span-2 reveal delay-80">
                 <div class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
                 </div>
                 <h3>Live shot feedback</h3>
                 <p>Optional feedback after every shot: a compact banner with the key issue and a simple swing cue, so you can adjust on the spot.</p>
             </article>
-            <article class="card span-2 reveal" style="--delay:160ms">
+            <article class="card span-2 reveal delay-160">
                 <div class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2L20 3M16 7l3 3M14 9l3 3"/></svg>
                 </div>
@@ -1063,7 +1055,7 @@
                 <p>Use your own API key with Claude, ChatGPT or Gemini — you choose the provider and model. Your key stays on your device.</p>
             </article>
         </div>
-        <p class="note reveal" style="text-align:center; max-width:760px; margin-inline:auto;">
+        <p class="note reveal note-narrow">
             AI analysis is off by default; nothing is sent to an AI provider until you turn it on. When you do, each analysis sends
             your shot data, session name, club names and your own drills to the AI provider you chose (Claude / ChatGPT / Gemini); your API key is stored only on your device. See our <a href="privacypolicy/">Privacy Policy</a> for details.
         </p>
@@ -1185,18 +1177,18 @@
                 <p class="quote">“Thank you for helping the GCQ community with this app. Every software from Foresight is horrendous — this app really saved the day!”</p>
                 <p class="quote-author">Kcct82 · <span>Great for my GCQ</span></p>
             </article>
-            <article class="card span-2 reveal" style="--delay:80ms">
+            <article class="card span-2 reveal delay-80">
                 <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
                 <p class="quote">“This is an intuitive app to integrate GCQuad swing data.”</p>
                 <p class="quote-author">EddyD23 · <span>Awesome App</span></p>
             </article>
-            <article class="card span-2 reveal" style="--delay:160ms">
+            <article class="card span-2 reveal delay-160">
                 <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
                 <p class="quote">“This app works well with the GCQuad. It would be great to save and store combine sessions for review.”</p>
                 <p class="quote-author">Tttvbf · <span>Great app</span></p>
             </article>
         </div>
-        <p class="note reveal" style="text-align:center;">
+        <p class="note reveal ta-center">
             <a href="https://apps.apple.com/us/app/trajectoryx/id6502289160" target="_blank" rel="noopener">Read more reviews on the App Store →</a>
         </p>
     </div>
@@ -1227,7 +1219,7 @@
                     <li>Try Pro daily: 10 shots a day with the Foresight-like or TrackMan-like model and roll</li>
                 </ul>
             </article>
-            <article class="card plan-premium reveal" style="--delay:80ms">
+            <article class="card plan-premium reveal delay-80">
                 <span class="plan-tag premium">Pro · optional</span>
                 <h3>Unlock the extras</h3>
                 <ul class="plan-list">

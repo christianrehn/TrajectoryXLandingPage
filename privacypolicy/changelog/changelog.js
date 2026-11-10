@@ -1,0 +1,63 @@
+// Was an inline <script> in index.html, moved out on 10.11.2026 so the CSP can drop script-src 'unsafe-inline'.
+
+    $(function() {
+
+        var apiURL = "https://itunes.apple.com/lookup?id=1604573775&country=de&callback=?";
+
+        $.getJSON(apiURL, function(json) {
+
+            if (json.results && json.results.length) {
+
+                console.info("Image strings loaded from Apple API.");
+                var appInfo = json.results[0];
+
+                // Set favicon
+                $('link[rel="shortcut icon"]').attr("href", appInfo.artworkUrl512);
+
+                // Set page title using the iOS app ID if it is not set manually in _config.yml
+                var $pageTitle = $(".pageTitle");
+                if ($.trim($($pageTitle).text()).length == 0) {
+                    $($pageTitle).html(appInfo.trackName);
+                }
+
+                // Set large app icon using the iOS app ID if it is not set manually in _config.yml
+                var $appIconLarge = $(".appIconLarge");
+                if (!$appIconLarge.attr('src')) {
+                    $($appIconLarge).attr("src", appInfo.artworkUrl512);
+                }
+
+                // Set header app icon using the iOS app ID if it is not set manually in _config.yml
+                var $appIconHeader = $(".headerIcon");
+                if (!$appIconHeader.attr('src')) {
+                    $($appIconHeader).attr("src", appInfo.artworkUrl512);
+                }
+
+                // Set app name using the iOS app ID if it is not set manually in _config.yml
+                var $appName = $(".appName");
+                if ($.trim($($appName).text()).length == 0) {
+                    $($appName).html(appInfo.trackName);
+                }
+
+                // Set the name displayed in the header if it is not set manually in _config.yml
+                var $headerName = $(".headerName");
+                if ($.trim($($headerName).text()).length == 0) {
+                    $($headerName).html(appInfo.trackName);
+                }
+
+                // Set price using the iOS app ID if it is not set manually in _config.yml
+                var $appPrice = $(".appPrice");
+                if ($.trim($($appPrice).text()).length == 0) {
+                    $($appPrice).html(appInfo.formattedPrice);
+                }
+
+                // Set App Store link using the iOS app ID if it is not set manually in _config.yml
+                var $appStoreLink = $(".appStoreLink");
+                if ($.trim($appStoreLink.attr('href')).length == 0) {
+                    $($appStoreLink).attr("href", appInfo.trackViewUrl);
+                }
+
+                console.info(appInfo);
+
+            }
+        });
+    });

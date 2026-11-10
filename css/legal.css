@@ -1,0 +1,27 @@
+/* Legal page typography (privacypolicy/). Was an inline <style> block, moved out on 10.11.2026
+   so the CSP can drop style-src 'unsafe-inline'. */
+/* Legal page typography on top of the shared design system */
+.legal { padding-top: clamp(8rem, 6rem + 8vw, 11rem); padding-bottom: clamp(3rem, 2rem + 5vw, 6rem); }
+.legal .wrap { width: min(100% - 2.5rem, 820px); margin-inline: auto; }
+.legal .updated { color: var(--faint); font-size: 0.9rem; margin-top: 1.4rem; }
+.prose {
+    margin-top: 2.2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: clamp(1.6rem, 1rem + 3vw, 3rem);
+}
+.prose h2 { font-size: 1.5rem; margin-top: 2.4rem; }
+.prose h2:first-child { margin-top: 0; }
+.prose p { color: var(--muted); margin-top: 1rem; }
+.prose p strong { color: var(--text); }
+.prose .lead-note {
+    border-left: 3px solid var(--accent);
+    background: rgba(0, 157, 220, 0.08);
+    border-radius: 0 12px 12px 0;
+    padding: 1rem 1.2rem;
+    margin-top: 1.2rem;
+}
+.prose a { color: #5fd9ff; font-weight: 700; text-decoration: underline; }

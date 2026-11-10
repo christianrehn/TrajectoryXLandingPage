@@ -1,0 +1,23 @@
+/* Former inline style="" attributes of index.html and privacypolicy/ (10.11.2026).
+   The CSP has no style-src 'unsafe-inline': a style="" attribute in the markup is IGNORED by the
+   browser. Add a class here instead. !important mirrors the precedence the inline style had. */
+.ar-4604 { --ar:0.4604 !important; }
+.ar-8515 { --ar:0.8515 !important; }
+.delay-60 { --delay:60ms !important; }
+.delay-80 { --delay:80ms !important; }
+.delay-100 { --delay:100ms !important; }
+.delay-120 { --delay:120ms !important; }
+.delay-160 { --delay:160ms !important; }
+.delay-180 { --delay:180ms !important; }
+.delay-240 { --delay:240ms !important; }
+.delay-320 { --delay:320ms !important; }
+.delay-400 { --delay:400ms !important; }
+.delay-480 { --delay:480ms !important; }
+.legal-title { font-size: clamp(2.2rem, 1.6rem + 3vw, 3.4rem) !important; margin-top: 1rem !important; }
+.mt-0 { margin-top:0 !important; }
+.mt-1 { margin-top:1rem !important; }
+.note-narrow { text-align:center !important; max-width:760px !important; margin-inline:auto !important; }
+.pad-block-0 { padding-block: 0 !important; }
+.phone-col { flex:1 1 200px !important; max-width:260px !important; }
+.phone-row { display:flex !important; gap:1rem !important; justify-content:center !important; align-items:flex-start !important; flex-wrap:wrap !important; }
+.ta-center { text-align:center !important; }
